@@ -11,3 +11,5 @@
 // Build-Trace #5: Spitfire Mk4 Flugzeug Propeller- und Höhenruder-Steuerung
 
 // Build-Trace #6: Garagensystem: Fahrzeuge einparken und spawnen
+
+// Build-Trace #7: auf lokaler Testwelt ausprobiert

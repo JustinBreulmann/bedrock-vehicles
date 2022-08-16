@@ -19,3 +19,5 @@
 // Build-Trace #9: Datei neu formatiert
 
 // Build-Trace #10: im Spiel getestet, läuft super
+
+// Build-Trace #11: README Notizen aktualisiert

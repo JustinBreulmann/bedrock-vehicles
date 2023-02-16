@@ -25,3 +25,5 @@
 // Build-Trace #12: Chevy Impala 81 Polizeiwagen Sirene und Lackierungen
 
 // Build-Trace #13: Prüfung auf undefined hinzugefügt
+
+// Build-Trace #14: Tippfehler behoben

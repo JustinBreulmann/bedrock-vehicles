@@ -33,3 +33,5 @@
 // Build-Trace #17: Randfall abgefangen
 
 // Build-Trace #18: Porsche 959 Sportwagen Fahrphysik
+
+// Build-Trace #19: Hupe ertönt beim Springen während der Fahrt

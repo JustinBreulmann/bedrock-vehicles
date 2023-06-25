@@ -37,3 +37,5 @@
 // Build-Trace #19: Hupe ertönt beim Springen während der Fahrt
 
 // Build-Trace #20: kleines Update
+
+// Build-Trace #21: Formatierung und Kommentare angepasst

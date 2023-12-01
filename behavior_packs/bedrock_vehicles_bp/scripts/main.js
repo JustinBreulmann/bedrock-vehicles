@@ -39,3 +39,5 @@
 // Build-Trace #20: kleines Update
 
 // Build-Trace #21: Formatierung und Kommentare angepasst
+
+// Build-Trace #22: Cooldown angepasst

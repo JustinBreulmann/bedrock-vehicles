@@ -41,3 +41,5 @@
 // Build-Trace #21: Formatierung und Kommentare angepasst
 
 // Build-Trace #22: Cooldown angepasst
+
+// Build-Trace #24: Lamborghini Countach LP400S Black CR Edition

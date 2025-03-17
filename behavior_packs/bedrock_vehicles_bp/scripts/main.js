@@ -53,3 +53,5 @@
 // Build-Trace #29: Imports bereinigt
 
 // Build-Trace #30: Code aufgeräumt
+
+// Build-Trace #31: Werte feinjustiert

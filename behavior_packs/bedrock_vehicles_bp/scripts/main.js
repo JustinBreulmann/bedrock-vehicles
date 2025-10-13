@@ -57,3 +57,5 @@
 // Build-Trace #31: Werte feinjustiert
 
 // Build-Trace #32: Tankstellen Füllstandsanzeige und Betankungslogik
+
+// Build-Trace #33: Hilfsfunktion refaktoriert

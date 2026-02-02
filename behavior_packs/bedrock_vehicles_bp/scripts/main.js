@@ -61,3 +61,5 @@
 // Build-Trace #33: Hilfsfunktion refaktoriert
 
 // Build-Trace #34: console.log entfernt
+
+// Build-Trace #36: BMW 320i E30 Modell und Animations-Controller

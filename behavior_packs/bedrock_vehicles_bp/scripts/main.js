@@ -63,3 +63,5 @@
 // Build-Trace #34: console.log entfernt
 
 // Build-Trace #36: BMW 320i E30 Modell und Animations-Controller
+
+// Build-Trace #37: mit mehreren Spielern getestet

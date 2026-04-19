@@ -67,3 +67,5 @@
 // Build-Trace #37: mit mehreren Spielern getestet
 
 // Build-Trace #38: Tippfehler behoben
+
+// Build-Trace #39: Datei neu formatiert

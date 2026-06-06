@@ -1,0 +1,81 @@
+{
+	"format_version" : "1.12.0",
+	"animation_controllers" : {
+				"controller.animation.smallplane.ride" : {
+					"initial_state" : "none",
+					"states" : {
+						"none" : {
+							"blend_transition": 0.5,
+							"animations": ["off"],
+							"on_entry": ["/tag @s add random", "/tag @s remove hasrider", "/effect @p clear", "/tag @s remove onground", "/effect @s clear", "/stopsound @a[r=10]","/playsound conduit.deactivate @a[r=10] ~~~ 0.01 0.3"],
+							"on_exit": ["/playsound armor.equip_leather @a[r=10] ~~~ 0.5 1"],
+							"transitions": [
+								{
+									"rider": "query.has_rider"
+								}
+							]
+						},
+						"rider": {
+							"on_entry": ["/tag @s remove random", "/tag @s add hasrider", "/tag @s add onground"],
+							"animations": ["on_wait"],
+							"transitions": [
+								{
+									"none": "!query.has_rider"
+								},
+								{
+									"moving": "query.is_moving > 0.1"
+								},
+								{
+									"on_fly": "!query.is_on_ground"
+								}
+							]
+						},
+						"moving": {
+							"animations": ["on_ground"],
+							"on_entry": ["/effect @s clear"],
+							"transitions": [
+								{
+									"rider": "query.is_moving < 0.1 && query.has_rider"
+								},
+								{
+									"on_fly": "!query.is_on_ground"
+								},
+								{
+									"none": "!query.has_rider"
+								}
+							],
+							"blend_transition": 0.5
+						},
+						"on_fly": {
+							"animations": ["on_fly"],
+							"on_entry": ["/tag @s remove onground"],
+							"on_exit": ["/effect @s clear", "/playsound step.sand @a[r=10] ~~~ 1 0.6", "/tag @s add onground"],
+							"transitions": [
+								{
+									"moving": "query.is_on_ground && query.has_rider && query.is_moving > 0.1"
+								},
+								{
+									"none": "!query.has_rider"
+								}
+							],
+							"blend_transition": 0.5
+						}
+					}
+				},
+				"controller.animation.smallplane.death" : {
+					"initial_state" : "alive",
+					"states" : {
+						"alive" : {
+							"on_exit": ["/event entity @s plane:dead_smallplane"],
+							"transitions": [
+								{
+									"death1": "!query.is_alive"
+								}
+							]
+						},
+						"death1": {
+						}
+					}
+				}
+			}
+		}

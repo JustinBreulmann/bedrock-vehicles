@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "exp:knot_entity",
+      "materials": {
+        "default": "bat"
+      },
+      "textures": {
+        "default": "textures/entity/lead_knot"
+      },
+      "geometry": {
+        "default": "geometry.knot"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

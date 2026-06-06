@@ -1,0 +1,409 @@
+{
+	"vehicle.pb389.drive": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/pb389/drive"
+		]
+	},
+	"vehicle.pb389.move": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/pb389/move"
+		]
+	},
+	"vehicle.pb389.startup": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/pb389/startup"
+		]
+	},
+	"vehicle.ex5dream.drive": {
+			"category": "neutral",
+			"sounds": [
+			  "sounds/ex5dream/ex5dream"
+			]
+	},
+	"vehicle.pb389.horn": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/pb389/horn"
+		]
+	},
+	"vehicle.pb389.doorclose": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/pb389/doorclose"
+		]
+	},
+	"vehicle.pb389.dooropen": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/pb389/dooropen"
+		]
+	},
+	"vehicle.pb389.hit" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+            "sounds/pb389/hit1",
+            "sounds/pb389/hit2",
+            "sounds/pb389/hit3"
+        ]
+    },
+	"vehicle.hiluxn50.drive": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/hiluxn50/drive"
+		]
+	},
+	"vehicle.hiluxn50.startup": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/hiluxn50/startup"
+		]
+	},
+	"vehicle.hiluxn50.doorclose": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/hiluxn50/doorclose"
+		]
+	},
+	"vehicle.hiluxn50.dooropen": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/hiluxn50/dooropen"
+		]
+	},
+	"vehicle.hiluxn50.hood": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/hiluxn50/hood"
+		]
+	},
+	"vehicle.hiluxn50.hit" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+            "sounds/hiluxn50/hit1",
+            "sounds/hiluxn50/hit2",
+            "sounds/hiluxn50/hit3"
+        ]
+    },
+	"vehicle.81impala.drive": {
+			"category": "neutral",
+			"sounds": [
+			  "sounds/81impala/drive"
+			]
+	},
+	"vehicle.81impala.startup": {
+			"category": "neutral",
+			"sounds": [
+			  "sounds/81impala/startup"
+			]
+	},
+	"vehicle.81impala.doorclose": {
+			"category": "neutral",
+			"sounds": [
+			  "sounds/81impala/doorclose"
+			]
+	},
+	"vehicle.81impala.dooropen": {
+			"category": "neutral",
+			"sounds": [
+			  "sounds/81impala/dooropen"
+			]
+	},
+	"vehicle.81impala.hood": {
+			"category": "neutral",
+			"sounds": [
+			  "sounds/81impala/hood"
+			]
+	},
+	"vehicle.demon_wai.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/wai/srtdemon"
+				]
+	},
+	"vehicle.p964_wai.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/wai/p964"
+				]
+	},
+	"vehicle.300sl_wai.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/wai/300sl"
+				]
+	},
+	"vehicle.countach_lp400.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/countach_lp400/drive"
+				]
+	},
+	"vehicle.countach_lp400.startup": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/countach_lp400/startup"
+				]
+	},
+	"vehicle.countach_lp400.doorclose": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/countach_lp400/doorclose"
+				]
+	},
+	"vehicle.countach_lp400.dooropen": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/countach_lp400/dooropen"
+				]
+	},
+	"vehicle.countach_lp400.popups": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/countach_lp400/popups"
+				]
+	},
+	"vehicle.countach_lp400.hit" : {
+				 "__use_legacy_max_distance" : "true",
+				 "category" : "neutral",
+				 "sounds" : [
+					"sounds/countach_lp400/hit1",
+					"sounds/countach_lp400/hit2",
+					"sounds/countach_lp400/hit3"
+				]
+	},
+	"vehicle.308gtb_wai.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/wai/308gtb"
+				]
+	},
+	"vehicle.bmwm1_wai.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/wai/m1"
+				]
+	},
+	"vehicle.c2_wai.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/wai/c2"
+				]
+	},
+	"vehicle.rx115.drive": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/rx115/rx115"
+				]
+	},
+	"object.tractor.engine_start": {
+				"category": "neutral",
+				"min_distance": 20.0,
+				"sounds": [
+				  "sounds/object/tractor/engine_start"
+				]
+	 },
+	  "object.tractor.engine_stop": {
+				"category": "neutral",
+				"min_distance": 20.0,
+				"sounds": [
+				  "sounds/object/tractor/engine_stop"
+				]
+	 },
+	 "object.tractor.engine": {
+				"category": "neutral",
+				"min_distance": 20.0,
+				"sounds": [
+				  "sounds/object/tractor/engine1",
+				  "sounds/object/tractor/engine2",
+				  "sounds/object/tractor/engine3"
+				]
+	 },
+	 "object.tractor.fuel": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/object/tractor/fuel"
+				]
+	 },
+	 "object.tractor.horn": {
+				"category": "neutral",
+				"min_distance": 20.0,
+				"sounds": [
+				  "sounds/object/tractor/horn"
+				]
+	 },
+	 "object.tractor.thud": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/object/tractor/thud"
+				]
+	 },
+	 "object.tractor.tool": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/object/tractor/tool1",
+				  "sounds/object/tractor/tool2"
+				]
+	 },
+	 "object.tractor.wrench": {
+				"category": "neutral",
+				"sounds": [
+				  "sounds/object/tractor/wrench1",
+				  "sounds/object/tractor/wrench2",
+				  "sounds/object/tractor/wrench3"
+				]
+	},
+	"vehicle.spitfiremk4.drive": {
+					"category": "neutral",
+					"sounds": [
+					  "sounds/spitfiremk4/drive"
+					]
+	},
+	"vehicle.spitfiremk4.startup": {
+					"category": "neutral",
+					"sounds": [
+					  "sounds/spitfiremk4/startup"
+					]
+	},
+	"vehicle.spitfiremk4.doorclose": {
+					"category": "neutral",
+					"sounds": [
+					  "sounds/spitfiremk4/doorclose"
+					]
+	},
+	"vehicle.spitfiremk4.dooropen": {
+					"category": "neutral",
+					"sounds": [
+					  "sounds/spitfiremk4/dooropen"
+					]
+	},
+	"vehicle.spitfiremk4.hood": {
+					"category": "neutral",
+					"sounds": [
+					  "sounds/spitfiremk4/hood"
+					]
+	},
+	"vehicle.spitfiremk4.hit" : {
+					 "__use_legacy_max_distance" : "true",
+					 "category" : "neutral",
+					 "sounds" : [
+						"sounds/spitfiremk4/hit1",
+						"sounds/spitfiremk4/hit2",
+						"sounds/spitfiremk4/hit3"
+					]
+	},
+	"vehicle.67shelby.drive": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/67shelby/drive"
+						]
+	},
+	"vehicle.67shelby.startup": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/67shelby/startup"
+						]
+	},
+	"vehicle.67shelby.doorclose": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/67shelby/doorclose"
+						]
+	},
+	"vehicle.67shelby.dooropen": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/67shelby/dooropen"
+						]
+	},
+	"vehicle.67shelby.hood": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/67shelby/hood"
+						]
+	},
+	"vehicle.bmw320ie30.drive": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/bmw320ie30/drive"
+						]
+	},
+	"vehicle.bmw320ie30.startup": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/bmw320ie30/startup"
+						]
+	},
+	"vehicle.bmw320ie30.doorclose": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/bmw320ie30/doorclose"
+						]
+	},
+	"vehicle.bmw320ie30.dooropen": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/bmw320ie30/dooropen"
+						]
+	},
+	"vehicle.bmw320ie30.hood": {
+						"category": "neutral",
+						"sounds": [
+						  "sounds/bmw320ie30/hood"
+						]
+	},
+	"vehicles.null": {
+							"category": "block",
+							"sounds": []
+	},
+	"vehicles.plane_engine": {
+							"category": "block",
+							"sounds": [
+								{
+									"name": "sounds/vehicles/plane_engine",
+									"load_on_low_memory": true
+								}
+							]
+	},
+	"vehicles.helicopter_propeller": {
+							"category": "block",
+							"sounds": [
+								{
+									"name": "sounds/vehicles/helicopter_propeller",
+									"load_on_low_memory": true
+								}
+							]
+	},
+	"vehicles.plane_propeller": {
+							"category": "block",
+							"sounds": [
+								{
+									"name": "sounds/vehicles/plane_propeller",
+									"load_on_low_memory": true
+								}
+							]
+	},
+	"vehicles.jet_engine": {
+							"category": "block",
+							"sounds": [
+								{
+									"name": "sounds/vehicles/jet_engine",
+									"load_on_low_memory": true
+								}
+							]
+	},
+	"vehicle.bmw320ie30.hit" : {
+						 "__use_legacy_max_distance" : "true",
+						 "category" : "neutral",
+						 "sounds" : [
+							"sounds/bmw320ie30/hit1",
+							"sounds/bmw320ie30/hit2",
+							"sounds/bmw320ie30/hit3"
+						]
+
+	}
+}

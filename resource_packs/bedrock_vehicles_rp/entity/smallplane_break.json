@@ -1,0 +1,42 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "plane:smallplane_break",
+        "materials": { 
+            "default": "entity_alphatest"
+        },
+        "textures": {
+            "default": "textures/entity/smallplane_break"
+          },
+        "geometry": {
+          "default": "geometry.smallplane_break"
+        },
+        "particle_effects": {
+          "repair": "plane:repair",
+          "sparkle": "plane:etincelle",
+          "smoke": "minecraft:egg_destroy_emitter",
+          "tada": "plane:new_spawn_particle"
+        },
+        "sound_effects": {
+          "boom": "cauldron.explode",
+          "step": "step.copper",
+          "tada": "random.levelup"
+      },
+      "scripts": {
+        "animate": [
+          "repair_controller",
+          "death_controller"
+        ]
+      },
+      "animations": {
+        "repair_controller": "controller.animation.smallplane_break.repair",
+        "death_controller": "controller.animation.smallplane_break.death",
+        "death": "animation.smallplane_break.death",
+        "fixed": "animation.smallplane_break.fixed",
+        "repair": "animation.smallplane_break.repair"
+      },
+        "render_controllers": [ "controller.render.smallplane" ]
+      }
+    }
+  }

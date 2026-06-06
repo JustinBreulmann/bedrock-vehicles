@@ -1,0 +1,178 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+	   "controller.animation.bmw320ie30_pecutan": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "pecutan": "query.ground_speed > 3"
+				   }
+				]
+			 },
+			 "pecutan": {
+				"transitions": [
+				   {
+					  "default": "query.ground_speed < 3"
+				   }
+				],
+				"on_entry": [
+				   "@s velocity_1",
+				   "/playsound vehicle.bmw320ie30.adv_drive @a[r=5]"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_roadkill": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "roadkill": "query.ground_speed > 21.12"
+				   }
+				]
+			 },
+			 "roadkill": {
+				"transitions": [
+				   {
+					  "default": "query.ground_speed > 21.12"
+				   }
+				],
+				"on_entry": [
+				   "@s roadkill"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_meter": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "meter": "query.ground_speed > 3"
+				   }
+				]
+			 },
+			 "meter": {
+				"transitions": [
+				   {
+					  "default": "query.ground_speed < 3"
+				   }
+				],
+				"on_entry": [
+				   "/function bmw320ie30meter"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_soundstop": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "startup": "query.ground_speed < 3"
+				   }
+				]
+			 },
+			 "startup": {
+				"transitions": [
+				   {
+					  "default": "query.ground_speed > 3"
+				   }
+				],
+				"on_entry": [
+				   "/stopsound @a[r=5] vehicle.bmw320ie30.adv_drive",
+				   "@s velocity_stationary"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_soundstop2": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "startup": "!query.has_rider"
+				   }
+				]
+			 },
+			 "startup": {
+				"transitions": [
+				   {
+					  "default": "query.has_rider"
+				   }
+				],
+				"on_entry": [
+				   "/stopsound @a[r=5] vehicle.bmw320ie30.adv_drive"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_startup": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "startup": "query.has_rider"
+				   }
+				]
+			 },
+			 "startup": {
+				"transitions": [
+				   {
+					  "default": "!query.has_rider"
+				   }
+				],
+				"on_entry": [
+				   "/playsound vehicle.bmw320ie30.startup @a[r=50] ~~~"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_explode": {
+		  "states": {
+			 "default": {
+				"transitions": [
+				   {
+					  "ono": "!query.is_alive"
+				   }
+				]
+			 },
+			 "ono": {
+				"transitions": [
+				   {
+					  "default": "query.is_alive"
+				   }
+				],
+				"on_entry": [
+				   "/execute as @s[tag=!togarage] at @s run summon ashminggu:vehicle_explosion",
+				   "/execute as @s[tag=!togarage] at @s run summon ashminggu:vehicle_explosion",
+				   "/execute as @s[tag=!togarage] at @s run particle minecraft:huge_explosion_emitter ~~~"
+				]
+			 }
+		  }
+	   },
+	   "controller.animation.bmw320ie30_horn": {
+		"states": {
+		   "default": {
+			  "transitions": [
+				 {
+					"horn": "query.is_jumping"
+				 }
+			  ]
+		   },
+		   "horn": {
+			  "transitions": [
+				 {
+					"default": "!query.is_jumping"
+				 }
+			  ],
+			  "on_entry": [
+				 "/say hi"
+			  ]
+		   }
+		}
+	 }	 
+	}
+ }
+ 

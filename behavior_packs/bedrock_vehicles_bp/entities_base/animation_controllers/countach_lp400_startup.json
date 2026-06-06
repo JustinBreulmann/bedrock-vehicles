@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.countach_lp400_startup": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"startup": "query.has_rider"
+						}
+					]
+				},
+				"startup": {
+					"transitions": [
+						{
+							"default": "!query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/playsound vehicle.countach_lp400.startup @a[r=50] ~~~"
+					]
+				}
+			}
+		}
+	}
+}

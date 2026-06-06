@@ -1,0 +1,31 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.jetski.volante": {
+            "loop": true,
+            "bones": {
+                "handlebar": {
+                    "rotation": [0, "Math.max(-25, Math.min(25,query.yaw_speed * -0.3))*-1", 0]
+                }
+            }
+        },
+        "animation.jetski.jetski": {
+            "loop": true,
+            "bones": {
+                "jet_ski": {
+                    "rotation": [0, 0, "Math.max(-10, Math.min(10,query.yaw_speed * -0.3))*-1"]
+                }
+            }
+        },
+        "animation.jetski.run": {
+            "loop": true,
+            "animation_length": 0.1,
+            "particle_effects": {
+                "0.0": {
+                    "effect": "water",
+                    "locator": "water_particle"
+                }
+            }
+        }
+    }
+}

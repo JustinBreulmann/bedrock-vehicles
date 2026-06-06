@@ -1,0 +1,1 @@
+playanimation @s animation.honda_cubc70.meter1 animation.honda_cubc70.meter1 0 "!query.is_moving"

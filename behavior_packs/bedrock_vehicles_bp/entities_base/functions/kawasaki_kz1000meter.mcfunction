@@ -1,0 +1,1 @@
+playanimation @s animation.kawasaki_kz1000.meter1 animation.kawasaki_kz1000.meter1 0 "!query.is_moving"

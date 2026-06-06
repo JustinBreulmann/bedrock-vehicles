@@ -1,0 +1,282 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "lp400s:red",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"door_open": {
+        		"minecraft:transformation": {
+          		"into": "lp400s:red_b2",
+          		"delay": 0.1
+       			 }
+    		},
+    		"hood_open": {
+        		"minecraft:transformation": {
+          		"into": "lp400s:red_open",
+          		"delay": 0.1
+       			 }
+    		},
+			"black": {
+				"minecraft:transformation": {
+					"into": "lp400s:black",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"orange": {
+				"minecraft:transformation": {
+					"into": "lp400s:orange",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"red": {
+				"minecraft:transformation": {
+					"into":"lp400s:red",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"silver": {
+				"minecraft:transformation": {
+					"into": "lp400s:silver",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"white": {
+				"minecraft:transformation": {
+					"into": "lp400s:white",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"yellow": {
+				"minecraft:transformation": {
+					"into": "lp400s:yellow",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 0.8
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "black_dye"
+								}
+							]
+						},
+						"event": "turn_black"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "orange_dye"
+								}
+							]
+						},
+						"event": "turn_orange"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "red_dye"
+								}
+							]
+						},
+						"event": "red_black"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "light_gray_dye"
+								}
+							]
+						},
+						"event": "turn_silver"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "white_dye"
+								}
+							]
+						},
+						"event": "turn_white"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "yellow_dye"
+								}
+							]
+						},
+						"event": "turn_yellow"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_open"
+					},
+					"use_item": false,
+					"interact_text": "Turn on popup headlights"
+				},
+				{
+					"on_interact": {
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Open Door"
+				}
+			]
+		},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": true
+			}
+		},
+
+		"events": {
+			"door_open": {
+        		"add": {
+          			"component_groups": [
+            			"door_open"
+          			]
+        		}
+      		},
+      		"hood_open": {
+        		"add": {
+          			"component_groups": [
+            			"hood_open"
+          			]
+        		}
+      		},
+			  "turn_black": {
+				"add": {
+					"component_groups": [
+						"black"
+					]
+				}
+			},
+			"turn_orange": {
+				"add": {
+					"component_groups": [
+						"orange"
+					]
+				}
+			},
+			"turn_red": {
+				"add": {
+					"component_groups": [
+						"red"
+					]
+				}
+			},
+			"turn_silver": {
+				"add": {
+					"component_groups": [
+						"silver"
+					]
+				}
+			},
+			"turn_white": {
+				"add": {
+					"component_groups": [
+						"white"
+					]
+				}
+			},
+			"turn_yellow": {
+				"add": {
+					"component_groups": [
+						"yellow"
+					]
+				}
+			}
+		}
+	}
+}

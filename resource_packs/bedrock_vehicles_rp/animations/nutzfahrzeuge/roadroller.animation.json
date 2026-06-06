@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.roadroller.run": {
+			"loop": true,
+			"animation_length": 2.6,
+			"bones": {
+				"frontWheel": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.6": [720, 0, 0]
+					}
+				},
+				"hexadecagon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.6": [720, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

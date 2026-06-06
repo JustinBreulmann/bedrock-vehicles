@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "peterbilt389:black_bet1",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/pb389/black"
+			},
+			"geometry": {
+				"default": "geometry.peterbilt389_m1"
+			},
+			"render_controllers": [
+				"controller.render.pb389"
+			],
+			"animations": {
+				"drive": "animation.pb389.drive",
+				"turning": "animation.pb389.turning",
+				"close": "animation.pb389.close"
+			},
+			"sound_effects": {
+        		"close": "vehicle.pb389.doorclose"
+      		},
+			"spawn_egg": {
+				"texture": "pb389",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.pb389.general1"
+				}
+			]
+		}
+	}
+}

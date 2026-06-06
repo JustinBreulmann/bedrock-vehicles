@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "spitfiremk4:bgreen2",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/spitfiremk4/british_green"
+			},
+			"geometry": {
+				"default": "geometry.spitfiremk4_m2"
+			},
+			"render_controllers": [
+				"controller.render.spitfiremk4"
+			],
+			"animations": {
+				"drive": "animation.spitfiremk4.drive",
+				"turning": "animation.spitfiremk4.turning",
+				"door": "animation.spitfiremk4.door",
+				"open": "animation.spitfiremk4.open",
+				"meter_player": "animation.spitfiremk4.meter_player",
+				"meter_player2": "animation.spitfiremk4.meter_player2",
+				"wipers": "animation.spitfiremk4.wipers"
+			},
+			"sound_effects": {
+        		"open": "vehicle.spitfiremk4.dooropen"
+      		},
+			"spawn_egg": {
+				"texture": "spitfiremk4",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.spitfiremk4.general2"
+				}
+			]
+		}
+	}
+}

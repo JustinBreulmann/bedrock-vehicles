@@ -1,0 +1,1 @@
+playanimation @s animation.hiluxn50.meter1 animation.hiluxn50.meter1 0 "!query.is_moving"

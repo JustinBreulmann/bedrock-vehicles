@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bmw320ie30:white_open",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/bmw320ie30/white"
+			},
+			"geometry": {
+				"default": "geometry.e30_320i_sedan_m1_open"
+			},
+			"render_controllers": [
+				"controller.render.bmw320ie30"
+			],
+			"animations": {
+				"drive": "animation.bmw320ie30.drive",
+				"turning": "animation.bmw320ie30.turning",
+				"hood": "animation.bmw320ie30.trunk"
+			},
+			"spawn_egg": {
+				"texture": "bmw320ie30",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.bmw320ie30.general3"
+				}
+			]
+		}
+	}
+}

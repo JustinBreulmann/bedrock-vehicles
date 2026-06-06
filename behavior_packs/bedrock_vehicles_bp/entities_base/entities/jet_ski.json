@@ -1,0 +1,631 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "add:jet_ski",
+            "is_spawnable":false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "variant0": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "variant1": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "variant2": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "variant3": {
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "variant4": {
+                "minecraft:variant": {
+                    "value": 4
+                }
+            },
+            "variant5": {
+                "minecraft:variant": {
+                    "value": 5
+                }
+            },
+            "variant6": {
+                "minecraft:variant": {
+                    "value": 6
+                }
+            },
+            "variant7": {
+                "minecraft:variant": {
+                    "value": 7
+                }
+            },
+            "variant8": {
+                "minecraft:variant": {
+                    "value": 8
+                }
+            },
+            "variant9": {
+                "minecraft:variant": {
+                    "value": 9
+                }
+            },
+            "variant10": {
+                "minecraft:variant": {
+                    "value": 10
+                }
+            },
+            "variant11": {
+                "minecraft:variant": {
+                    "value": 11
+                }
+            },
+            "variant12": {
+                "minecraft:variant": {
+                    "value": 12
+                }
+            },
+            "variant13": {
+                "minecraft:variant": {
+                    "value": 13
+                }
+            },
+            "variant14": {
+                "minecraft:variant": {
+                    "value": 14
+                }
+            },
+            "variant15": {
+                "minecraft:variant": {
+                    "value": 15
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["boat", "inanimate"]
+            },
+            "minecraft:navigation.generic": {
+                "can_path_over_water": true
+            },
+            "minecraft:scale": {
+                "value": 1.2
+            },
+            "minecraft:rideable": {
+                "seat_count": 2,
+                "interact_text": "drive.jet.ski",
+                "pull_in_entities": false,
+                "seats": [{
+                    "position": [0.0, 0.61, -0.4]
+                }, {
+                    "position": [0.0, 0.63, -0.95],
+                    "min_rider_count": 2,
+                    "max_rider_count": 2
+                }]
+            },
+            "minecraft:input_ground_controlled": {},
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": 0
+            },
+            "minecraft:collision_box": {
+                "width": 1.2,
+                "height": 1.2
+            },
+            "minecraft:health": {
+                "value": {
+                    "range_min": 20,
+                    "range_max": 20
+                }
+            },
+            "minecraft:healable": {
+                "items": [{
+                    "item": "quartz",
+                    "heal_amount": 4
+                }]
+            },
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:underwater_movement": {
+                "value": 0.15
+            },
+            "minecraft:behavior.float": {},
+            "minecraft:nameable": {},
+            "minecraft:buoyant": {
+                "base_buoyancy": 1.0,
+                "apply_gravity": true,
+                "simulate_waves": true,
+                "big_wave_probability": 0.03,
+                "big_wave_speed": 15.0,
+                "liquid_blocks": ["minecraft:water", "minecraft:flowing_water"]
+            },
+            "minecraft:physics": {},
+            "minecraft:leashable": {
+                "soft_distance": 4.0,
+                "hard_distance": 6.0,
+                "max_distance": 10.0
+            },
+            "minecraft:interact": [{
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "blue_dye"
+                        }]
+                    },
+                    "event": "blue"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "red_dye"
+                        }]
+                    },
+                    "event": "red"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "lime_dye"
+                        }]
+                    },
+                    "event": "lime"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "orange_dye"
+                        }]
+                    },
+                    "event": "orange"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "purple_dye"
+                        }]
+                    },
+                    "event": "purple"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "yellow_dye"
+                        }]
+                    },
+                    "event": "yellow"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "gray_dye"
+                        }]
+                    },
+                    "event": "gray"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "magenta_dye"
+                        }]
+                    },
+                    "event": "magenta"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "brown_dye"
+                        }]
+                    },
+                    "event": "brown"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "white_dye"
+                        }]
+                    },
+                    "event": "white"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "cyan_dye"
+                        }]
+                    },
+                    "event": "cyan"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "green_dye"
+                        }]
+                    },
+                    "event": "green"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "black_dye"
+                        }]
+                    },
+                    "event": "black"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "light_blue_dye"
+                        }]
+                    },
+                    "event": "lightblue"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "pink_dye"
+                        }]
+                    },
+                    "event": "pink"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }, {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [{
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }, {
+                            "test": "has_equipment",
+                            "domain": "hand",
+                            "subject": "other",
+                            "value": "light_gray_dye"
+                        }]
+                    },
+                    "event": "lightgray"
+                },
+                "particle_on_start": {
+                    "particle_type": "smoke",
+                    "particle_y_offset": 0.50,
+                    "particle_offset_towards_interactor": true
+                },
+                "use_item": true,
+                "play_sounds": "fizz",
+                "interact_text": "paint.jet.ski"
+            }]
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": ["variant15"]
+                }
+            },
+            "blue": {
+                "add": {
+                    "component_groups": ["variant0"]
+                }
+            },
+            "red": {
+                "add": {
+                    "component_groups": ["variant1"]
+                }
+            },
+            "lime": {
+                "add": {
+                    "component_groups": ["variant2"]
+                }
+            },
+            "orange": {
+                "add": {
+                    "component_groups": ["variant3"]
+                }
+            },
+            "purple": {
+                "add": {
+                    "component_groups": ["variant4"]
+                }
+            },
+            "yellow": {
+                "add": {
+                    "component_groups": ["variant5"]
+                }
+            },
+            "gray": {
+                "add": {
+                    "component_groups": ["variant6"]
+                }
+            },
+            "magenta": {
+                "add": {
+                    "component_groups": ["variant7"]
+                }
+            },
+            "brown": {
+                "add": {
+                    "component_groups": ["variant8"]
+                }
+            },
+            "white": {
+                "add": {
+                    "component_groups": ["variant9"]
+                }
+            },
+            "cyan": {
+                "add": {
+                    "component_groups": ["variant10"]
+                }
+            },
+            "green": {
+                "add": {
+                    "component_groups": ["variant11"]
+                }
+            },
+            "black": {
+                "add": {
+                    "component_groups": ["variant12"]
+                }
+            },
+            "lightblue": {
+                "add": {
+                    "component_groups": ["variant13"]
+                }
+            },
+            "pink": {
+                "add": {
+                    "component_groups": ["variant14"]
+                }
+            },
+            "lightgray": {
+                "add": {
+                    "component_groups": ["variant15"]
+                }
+            }
+        }
+    }
+}

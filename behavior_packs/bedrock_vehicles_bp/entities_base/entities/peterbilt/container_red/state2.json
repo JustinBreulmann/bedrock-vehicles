@@ -1,0 +1,600 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "peterbilt389:container_red2",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"startup",
+					"seat",
+					"meter",
+					"stop",
+					"stop2",
+					"pecutan",
+					"roadkill",
+					"explode"
+			]
+		},
+		"animations": {
+			"startup": "controller.animation.pb389_startup",
+			"seat": "controller.animation.pb389_seat",
+			"meter": "controller.animation.pb389_meter",
+			"stop": "controller.animation.pb389_soundstop",
+			"stop2": "controller.animation.pb389_soundstop2",
+			"pecutan": "controller.animation.pb389_pecutan",
+			"roadkill": "controller.animation.pb389_roadkill",
+			"explode": "controller.animation.pb389_explode"		
+			}
+		},
+		"component_groups": {
+			"door_close": {
+        		"minecraft:transformation": {
+          		"into": "peterbilt389:container_red1",
+          		"delay": 0.1
+       			 }
+    		},
+    		"velocity_1": {
+        		"minecraft:movement": {
+					"value": 0.125 // 5.5 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.5,
+  					"time_down_event": { 
+  						"event": "velocity_2" 
+  					}
+				}
+    		},
+    		"velocity_2": {
+        		"minecraft:movement": {
+					"value": 0.15 // 6.6 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.5,
+  					"time_down_event": { 
+  						"event": "velocity_3" 
+  					}
+				}
+    		},
+    		"velocity_3": {
+        		"minecraft:movement": {
+					"value": 0.175 // 7.7 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.5,
+  					"time_down_event": { 
+  						"event": "velocity_4" 
+  					}
+				}
+    		},
+    		"velocity_4": {
+        		"minecraft:movement": {
+					"value": 0.2 // 8.8 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.5,
+  					"time_down_event": { 
+  						"event": "velocity_5" 
+  					}
+				}
+    		},
+    		"velocity_5": {
+        		"minecraft:movement": {
+					"value": 0.21 // 9.9 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.5,
+  					"time_down_event": { 
+  						"event": "velocity_6" 
+  					}
+				}
+    		},
+    		"velocity_6": {
+        		"minecraft:movement": {
+					"value": 0.23 // 11 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.7,
+  					"time_down_event": { 
+  						"event": "velocity_7" 
+  					}
+				}
+    		},
+    		"velocity_7": {
+        		"minecraft:movement": {
+					"value": 0.25 // 12.1 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.7,
+  					"time_down_event": { 
+  						"event": "velocity_8" 
+  					}
+				}
+    		},
+    		"velocity_8": {
+        		"minecraft:movement": {
+					"value": 0.27 // 13.2 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.7,
+  					"time_down_event": { 
+  						"event": "velocity_9" 
+  					}
+				}
+    		},
+    		"velocity_9": {
+        		"minecraft:movement": {
+					"value": 0.29 // 14.3 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.75,
+  					"time_down_event": { 
+  						"event": "velocity_10" 
+  					}
+				}
+    		},
+    		"velocity_10": {
+        		"minecraft:movement": {
+					"value": 0.31 // 15.4 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.8,
+  					"time_down_event": { 
+  						"event": "velocity_11" 
+  					}
+				}
+    		},
+    		"velocity_11": {
+        		"minecraft:movement": {
+					"value": 0.33 // 16.5 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.8,
+  					"time_down_event": { 
+  						"event": "velocity_12" 
+  					}
+				}
+    		},
+    		"velocity_12": {
+        		"minecraft:movement": {
+					"value": 0.35 // 17.6 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.85,
+  					"time_down_event": { 
+  						"event": "velocity_13" 
+  					}
+				}
+    		},
+    		"velocity_13": {
+        		"minecraft:movement": {
+					"value": 0.37 // 18.7 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 0.9,
+  					"time_down_event": { 
+  						"event": "velocity_14" 
+  					}
+				}
+    		},
+    		"velocity_14": {
+        		"minecraft:movement": {
+					"value": 0.39 // 19.8 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 1.0,
+  					"time_down_event": { 
+  						"event": "velocity_15" 
+  					}
+				}
+    		},
+    		"velocity_15": {
+        		"minecraft:movement": {
+					"value": 0.4 // 20.9 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 1.5,
+  					"time_down_event": { 
+  						"event": "velocity_16" 
+  					}
+				}
+    		},
+    		"velocity_16": {
+        		"minecraft:movement": {
+					"value": 0.41 // 22.0 ms⁻¹
+				},
+				"minecraft:timer": {
+  					"time": 2,
+  					"time_down_event": { 
+  						"event": "velocity_17" 
+  					}
+				}
+    		},
+    		"velocity_17": {
+        		"minecraft:movement": {
+					"value": 0.415 // 22.66 ms⁻¹
+				}
+    		},
+    		"roadkill": {
+				"minecraft:area_attack": {
+					"damage_per_tick": 30,
+					"damage_range": 0.8,
+					"cause": "contact",
+					"entity_filter": {
+						"none_of": [
+							{
+								"test": "is_riding",
+								"subject": "other",
+								"value": true
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "vehicles"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "vehicle"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "cars"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "car"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "bike"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "bikes"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "motorcycles"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "motorcycle"
+							}
+						]
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicles",
+					"trucks",
+					"peterbilt389"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 2.0,
+				"height": 3.9
+			},
+			"minecraft:health": {
+				"value": 180
+			},
+			"minecraft:movement": {
+				"value": 0.1 // 4.4 ms⁻¹
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:physics": {},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"crouching_skip_interact": true,
+				"interact_text": "Drive",
+				"family_types": [
+					"player"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.5,
+							1.2,
+							0.6
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					},
+					{
+						"position": [
+							-0.5,
+							1.2,
+							0.6
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					}
+				]
+			},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "door_close"
+					},
+					"use_item": false,
+					"interact_text": "Close door"
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"door_close": {
+        		"add": {
+          			"component_groups": [
+            			"door_close"
+          			]
+        		}
+      		},
+      		"velocity_1": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_1"
+          			]
+        		}
+      		},
+      		"velocity_2": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_2"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_1"
+          			]
+        		}
+      		},
+      		"velocity_3": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_3"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_2"
+          			]
+        		}
+      		},
+      		"velocity_4": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_4"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_3"
+          			]
+        		}
+      		},
+      		"velocity_5": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_5"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_4"
+          			]
+        		}
+      		},
+      		"velocity_6": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_6"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_5"
+          			]
+        		}
+      		},
+      		"velocity_7": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_7"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_6"
+          			]
+        		}
+      		},
+      		"velocity_8": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_8"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_7"
+          			]
+        		}
+      		},
+      		"velocity_9": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_9"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_8"
+          			]
+        		}
+      		},
+      		"velocity_10": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_10"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_9"
+          			]
+        		}
+      		},
+      		"velocity_11": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_11"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_10"
+          			]
+        		}
+      		},
+      		"velocity_12": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_12"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_11"
+          			]
+        		}
+      		},
+      		"velocity_13": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_13"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_12"
+          			]
+        		}
+      		},
+      		"velocity_14": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_14"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_13"
+          			]
+        		}
+      		},
+      		"velocity_15": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_15"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_14"
+          			]
+        		}
+      		},
+      		"velocity_16": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_16"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_15"
+          			]
+        		}
+      		},
+      		"velocity_17": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_17"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_16"
+          			]
+        		}
+      		},
+      		"roadkill": {
+        		"add": {
+          			"component_groups": [
+            			"roadkill"
+          			]
+        		}
+      		},
+      		"velocity_stationary": {
+        		"remove": {
+          			"component_groups": [
+            			"velocity_1",
+            			"velocity_2",
+            			"velocity_3",
+            			"velocity_4",
+            			"velocity_5",
+            			"velocity_6",
+            			"velocity_7",
+            			"velocity_8",
+            			"velocity_9",
+            			"velocity_10",
+            			"velocity_11",
+            			"velocity_12",
+            			"velocity_13",
+            			"velocity_14",
+            			"velocity_15",
+            			"velocity_16",
+            			"velocity_17",
+            			"roadkill"
+          			]
+        		}
+      		}
+		}
+	}
+}

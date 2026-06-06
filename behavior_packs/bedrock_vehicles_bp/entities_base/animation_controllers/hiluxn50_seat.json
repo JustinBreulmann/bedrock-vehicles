@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.hiluxn50_seat": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"riding": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function hiluxn50seat"
+					]
+				},
+				"riding": {
+					"transitions": [
+						{
+							"default": "query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/function hiluxn50seat"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "id:excavator",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"is_experomental":false,
+			"scripts": {
+				"animate": [
+					"replace"
+			]
+		},
+		"animations": {
+			"replace": "controller.animation.replace"
+		}
+	},
+	"components": {
+		"minecraft:type_family": {
+			"family": [
+				"cars",
+				"baustelle"
+			]
+		},
+	"minecraft:knockback_resistance": {
+			"value": 1,
+			"max": 1
+		},
+		"minecraft:scale": {
+			"value": 1
+		},
+		"minecraft:collision_box": {
+			"width": 1.5,
+			"height": 0.8
+		},
+		"minecraft:health": {
+			"value": 20
+		},
+		"minecraft:movement": {
+			"value": 0.16
+		},
+		"minecraft:movement.basic": {},
+		"minecraft:jump.static": {},
+		"minecraft:input_ground_controlled": {},
+		"minecraft:physics": {},
+		"minecraft:pushable": {
+		"is_pushable": false,
+		"is_pushable_by_piston": true
+		},
+		"minecraft:break_blocks": {
+			"breakable_blocks": [
+			"minecraft:air",
+			"minecraft:stone",
+			"minecraft:dirt",
+			"minecraft:grass"
+			]
+		},
+		"minecraft:rideable": {
+			"seat_count": 1,
+			"crouching_skip_interact": true,
+			"interact_text": "Fahren",
+			"family_types": [
+				"player"
+			],
+			"pull_in_entities": true,
+			"seats": [
+				{
+					"position": [0.75, 1.75, 1.8],
+					"min_rider_count": 1,
+					"max_rider_count": 1
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "81impala:black_between",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/81impala/black"
+			},
+			"geometry": {
+				"default": "geometry.81impala_m1"
+			},
+			"render_controllers": [
+				"controller.render.81impala"
+			],
+			"animations": {
+				"drive": "animation.81impala.drive",
+				"turning": "animation.81impala.turning",
+				"hood": "animation.81impala.hood2"
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.81impala.general3"
+				}
+			]
+		}
+	}
+}

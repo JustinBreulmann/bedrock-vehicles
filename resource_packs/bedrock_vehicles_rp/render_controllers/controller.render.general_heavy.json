@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.general_heavy": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{ "*": "Material.default" },
+				{ "*glass1": "Material.glass" },
+				{ "*glass2": "Material.glass" },
+				{ "*glass3": "Material.glass" },
+				{ "*glass4": "Material.glass" },
+				{ "*glass5": "Material.glass" },
+				{ "*glass6": "Material.glass" },
+				{ "*glass7": "Material.glass" },
+				{ "*glass8": "Material.glass" }
+			],
+			"textures": [
+				"Texture.default"
+			],
+			"is_hurt_color": {},
+            "on_fire_color": {}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bmw320ie30:red2",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/bmw320ie30/red"
+			},
+			"geometry": {
+				"default": "geometry.e30_320i_sedan_m2"
+			},
+			"render_controllers": [
+				"controller.render.bmw320ie30"
+			],
+			"animations": {
+				"drive": "animation.bmw320ie30.drive",
+				"turning": "animation.bmw320ie30.turning",
+				"door": "animation.bmw320ie30.door",
+				"open": "animation.bmw320ie30.open",
+				"meter_player": "animation.bmw320ie30.meter_player",
+				"meter_player2": "animation.bmw320ie30.meter_player2",
+				"wipers": "animation.bmw320ie30.wipers",
+				"up": "animation.bmw320ie30.up",
+				"down": "animation.bmw320ie30.down"
+			},
+			"sound_effects": {
+        		"open": "vehicle.bmw320ie30.dooropen"
+      		},
+			"spawn_egg": {
+				"texture": "bmw320ie30",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.bmw320ie30.general2"
+				}
+			]
+		}
+	}
+}

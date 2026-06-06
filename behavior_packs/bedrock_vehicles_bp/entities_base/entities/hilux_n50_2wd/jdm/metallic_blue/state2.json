@@ -1,0 +1,479 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hiluxn50:mblue2",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"startup",
+					"seat",
+					"meter",
+					"pecutan",
+					"roadkill",
+					"explode",
+					"stop",
+					"stop2"
+			]
+		},
+		"animations": {
+			"startup": "controller.animation.hiluxn50_startup",
+			"seat": "controller.animation.hiluxn50_seat",
+			"meter": "controller.animation.hiluxn50_meter",
+			"pecutan": "controller.animation.hiluxn50_pecutan",
+			"roadkill": "controller.animation.hiluxn50_roadkill",
+			"explode": "controller.animation.hiluxn50_explode",
+			"stop": "controller.animation.hiluxn50_soundstop",
+			"stop2": "controller.animation.hiluxn50_soundstop2"	
+			}
+		},
+		"component_groups": {
+			"door_close": {
+        		"minecraft:transformation": {
+          		"into": "hiluxn50:blue",
+          		"delay": 0.1
+       			 }
+    		},
+    		"velocity_1": {
+        		"minecraft:movement": {
+					"value": 0.2
+				},
+				"minecraft:timer": {
+  					"time": 0.3,
+  					"time_down_event": { 
+  						"event": "velocity_2" 
+  					}
+				}
+    		},
+    		"velocity_2": {
+        		"minecraft:movement": {
+					"value": 0.24
+				},
+				"minecraft:timer": {
+  					"time": 0.35,
+  					"time_down_event": { 
+  						"event": "velocity_3" 
+  					}
+				}
+    		},
+    		"velocity_3": {
+        		"minecraft:movement": {
+					"value": 0.28
+				},
+				"minecraft:timer": {
+  					"time": 0.35,
+  					"time_down_event": { 
+  						"event": "velocity_4" 
+  					}
+				}
+    		},
+    		"velocity_4": {
+        		"minecraft:movement": {
+					"value": 0.31
+				},
+				"minecraft:timer": {
+  					"time": 0.4,
+  					"time_down_event": { 
+  						"event": "velocity_5" 
+  					}
+				}
+    		},
+    		"velocity_5": {
+        		"minecraft:movement": {
+					"value": 0.33
+				},
+				"minecraft:timer": {
+  					"time": 0.5,
+  					"time_down_event": { 
+  						"event": "velocity_6" 
+  					}
+				}
+    		},
+    		"velocity_6": {
+        		"minecraft:movement": {
+					"value": 0.35
+				},
+				"minecraft:timer": {
+  					"time": 0.6,
+  					"time_down_event": { 
+  						"event": "velocity_7" 
+  					}
+				}
+    		},
+    		"velocity_7": {
+        		"minecraft:movement": {
+					"value": 0.37
+				},
+				"minecraft:timer": {
+  					"time": 0.75,
+  					"time_down_event": { 
+  						"event": "velocity_8" 
+  					}
+				}
+    		},
+    		"velocity_8": {
+        		"minecraft:movement": {
+					"value": 0.38
+				},
+				"minecraft:timer": {
+  					"time": 0.9,
+  					"time_down_event": { 
+  						"event": "velocity_9" 
+  					}
+				}
+    		},
+    		"velocity_9": {
+        		"minecraft:movement": {
+					"value": 0.39
+				},
+				"minecraft:timer": {
+  					"time": 0.9,
+  					"time_down_event": { 
+  						"event": "velocity_10" 
+  					}
+				}
+    		},
+    		"velocity_10": {
+        		"minecraft:movement": {
+					"value": 0.4
+				},
+				"minecraft:timer": {
+  					"time": 1.0,
+  					"time_down_event": { 
+  						"event": "velocity_11" 
+  					}
+				}
+    		},
+    		"velocity_11": {
+        		"minecraft:movement": {
+					"value": 0.41
+				},
+				"minecraft:timer": {
+  					"time": 1.0,
+  					"time_down_event": { 
+  						"event": "velocity_12" 
+  					}
+				}
+    		},
+    		"velocity_12": {
+        		"minecraft:movement": {
+					"value": 0.42 // 18.48 ms⁻¹
+				}
+    		},
+    		"roadkill": {
+				"minecraft:area_attack": {
+					"damage_per_tick": 25,
+					"damage_range": 0.8,
+					"cause": "contact",
+					"entity_filter": {
+						"none_of": [
+							{
+								"test": "is_riding",
+								"subject": "other",
+								"value": true
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "vehicles"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "vehicle"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "cars"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "car"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "bike"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "bikes"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "motorcycles"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "motorcycle"
+							}
+						]
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars",
+					"hiluxn50"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 1
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:movement": {
+				"value": 0.1
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:physics": {},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"crouching_skip_interact": true,
+				"interact_text": "Drive",
+				"family_types": [
+					"player"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.5,
+							0.17,
+							-0.05
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					},
+					{
+						"position": [
+							-0.5,
+							0.17,
+							-0.05
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					}
+				]
+			},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "door_close"
+					},
+					"use_item": false,
+					"interact_text": "Close Door"
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"door_close": {
+        		"add": {
+          			"component_groups": [
+            			"door_close"
+          			]
+        		}
+      		},
+      		"velocity_1": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_1"
+          			]
+        		}
+      		},
+      		"velocity_2": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_2"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_1"
+          			]
+        		}
+      		},
+      		"velocity_3": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_3"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_2"
+          			]
+        		}
+      		},
+      		"velocity_4": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_4"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_3"
+          			]
+        		}
+      		},
+      		"velocity_5": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_5"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_4"
+          			]
+        		}
+      		},
+      		"velocity_6": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_6"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_5"
+          			]
+        		}
+      		},
+      		"velocity_7": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_7"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_6"
+          			]
+        		}
+      		},
+      		"velocity_8": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_8"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_7"
+          			]
+        		}
+      		},
+      		"velocity_9": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_9"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_8"
+          			]
+        		}
+      		},
+      		"velocity_10": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_10"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_9"
+          			]
+        		}
+      		},
+      		"velocity_11": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_11"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_10"
+          			]
+        		}
+      		},
+      		"velocity_12": {
+        		"add": {
+          			"component_groups": [
+            			"velocity_12"
+          			]
+        		},
+        		"remove": {
+          			"component_groups": [
+            			"velocity_11"
+          			]
+        		}
+      		},
+      		"roadkill": {
+        		"add": {
+          			"component_groups": [
+            			"roadkill"
+          			]
+        		}
+      		},
+      		"velocity_stationary": {
+        		"remove": {
+          			"component_groups": [
+            			"velocity_1",
+            			"velocity_2",
+            			"velocity_3",
+            			"velocity_4",
+            			"velocity_5",
+            			"velocity_6",
+            			"velocity_7",
+            			"velocity_8",
+            			"velocity_9",
+            			"velocity_10",
+            			"velocity_11",
+            			"velocity_12",
+            			"roadkill"
+          			]
+        		}
+      		}
+		}
+	}
+}

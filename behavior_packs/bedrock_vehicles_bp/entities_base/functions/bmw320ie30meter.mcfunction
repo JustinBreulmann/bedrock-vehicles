@@ -1,0 +1,1 @@
+playanimation @s animation.bmw320ie30.meter1 animation.bmw320ie30.meter1 0 "!query.is_moving"

@@ -1,0 +1,43 @@
+{
+	"format_version" : "1.12.0",
+	"animation_controllers" : {
+				"controller.animation.smallplane_break.repair" : {
+					"initial_state" : "zero",
+					"states" : {
+						"zero" : {
+							"animations": ["death"],
+							"transitions": [
+								{
+									"repair": "query.any_animation_finished"
+								}
+							]
+						},
+						"repair": {
+							"animations": ["repair"],
+							"transitions": [
+								{
+									"fixed": "query.skin_id == 1"
+								}
+							]
+						},
+						"fixed": {
+							"animations": ["fixed"]
+						}
+					}
+				},
+				"controller.animation.smallplane_break.death" : {
+					"initial_state" : "alive",
+					"states" : {
+						"alive" : {
+							"transitions": [
+								{
+									"death": "!query.is_alive"
+								}
+							]
+						},
+						"death": {
+						}
+					}
+				}
+			}
+		}

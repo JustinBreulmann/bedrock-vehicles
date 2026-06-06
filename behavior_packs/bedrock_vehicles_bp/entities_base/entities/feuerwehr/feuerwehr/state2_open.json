@@ -1,0 +1,160 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "firetruck:state2",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"startup",
+					"seat",
+					"meter"
+			]
+		},
+		"animations": {
+			"startup": "controller.animation.pb389_startup",
+			"seat": "controller.animation.pb389_seat",
+			"meter": "controller.animation.pb389_meter"
+			}
+		},
+		"component_groups": {
+			"hood_close": {
+				"minecraft:transformation": {
+					"into": "firetruck:state1",
+					"delay": 0.1,
+					"keep_owner": true				
+					}
+				}
+			},
+			"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars",
+					"feuerwehr",
+					"firetruck"
+				]
+			},
+			"minecraft:leashable": {
+				"soft_distance": 14.0,
+				"hard_distance": 21.0,
+				"max_distance": 20.0,
+				"on_leash": {
+					"event": "minecraft:on_leash",
+					"target": "self"
+				},
+				"on_unleash": {
+					"event": "minecraft:on_unleash",
+					"target": "self"
+				},
+				"can_be_stolen": true
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 1
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:movement": {
+				"value": 0.0
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"crouching_skip_interact": true,
+				"interact_text": "Drive",
+				"family_types": [
+					"player"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.6,
+							1.30,
+							2.2
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					},
+					{
+						"position": [
+							-1.3,
+							1.30,
+							2.2
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					}
+				]
+			},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "feuerwehr:feuer_item"
+								}
+							]
+						},
+						"event": "feuerloscher"
+					},
+					"use_item": true,
+					"interact_text": "Feuerwehrschlauch"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_close"
+					},
+					"use_item": false,
+					"interact_text": "Test1"
+				}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"feuerloscher": {
+				"add": {
+					"component_groups": [
+						"feuerloscher"
+	  			  	]
+				}
+      		},
+				"hood_close": {
+				  "add": {
+						"component_groups": [
+						  "hood_close"
+					]
+				}
+			}
+		}
+	}
+}

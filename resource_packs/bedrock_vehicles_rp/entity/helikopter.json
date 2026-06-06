@@ -1,0 +1,38 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "plane:helikopter",
+        "materials": { 
+            "default": "entity_alphatest"
+        },
+        "textures": {
+            "default": "textures/entity/helikopter"
+          },
+        "geometry": {
+          "default": "geometry.helikopter"
+        },
+        "particle_effects": {
+          "onfire1": "plane:helikopter_onfire1",
+          "onfire2": "plane:helikopter_onfire2"
+        },
+        "sound_effects": {
+          "pshhh": "pshhh"
+      },
+      "scripts": {
+        "animate": [
+          "ride_controller",
+          "death_controller"
+        ]
+      },
+      "animations": {
+        "ride_controller": "controller.animation.helikopter.ride",
+        "death_controller": "controller.animation.helikopter.death",
+        "on_ground": "animation.helikopter.on_ground",
+        "on_fly": "animation.helikopter.on_fly",
+        "off": "animation.helikopter.off"
+      },
+        "render_controllers": [ "controller.render.helikopter" ]
+      }
+    }
+  }

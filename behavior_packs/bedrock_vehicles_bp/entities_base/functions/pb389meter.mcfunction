@@ -1,0 +1,1 @@
+playanimation @e[r=1,family=pb389] animation.pb389.meter1 animation.pb389.meter1 0 "!query.is_moving"

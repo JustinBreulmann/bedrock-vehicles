@@ -1,0 +1,1 @@
+playanimation @a[r=1.2] animation.player.pb389.drive controller.animation.player.base 0 "!query.is_riding"

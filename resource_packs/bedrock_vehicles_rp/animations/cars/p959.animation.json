@@ -1,0 +1,214 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.p959.turning": {
+			"loop": true,
+			"bones": {
+				"fronttire1": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fronttire2": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fb_left": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fb_right": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"steeringwheel": {
+					"rotation": [0, 0, "Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*-1"]
+				}
+			}
+		},
+		"animation.p959.drive": {
+			"loop": true,
+			"animation_length": 0.52,
+			"bones": {
+				"fronttire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [360, 0, 0]
+					}
+				},
+				"fronttire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [360, 0, 0]
+					}
+				},
+				"backtires": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [360, 0, 0]
+					}
+				},
+				"pecutan": {
+					"position": [0, -1, 0]
+				}
+			}
+		},
+		"animation.p959.door": {
+			"loop": true,
+			"bones": {
+				"leftdoor": {
+					"rotation": [0, -45, 0]
+					},
+				"rightdoor": {
+					"rotation": [0, 45, 0]
+					}	
+				}
+			},
+		"animation.p959.meter1": {
+			"loop": false,
+			"bones": {
+				"tempmeter": {
+					"rotation": {
+						"0.0": [0, 0, 60],
+						"100": [0, 0, 0]
+					}
+				},
+				"speedmeter": {
+					"rotation": {
+						"0.0": [0, 0, 220],
+						"21": [0, 0, 0]
+					}
+				},
+				"rpm_meter": {
+					"rotation": {
+						//first gear
+						"0.0": [0, 0, 227.5],
+						//second gear
+						"1.54": [0, 0, 0],
+						"1.74": [0, 0, 90],
+						//third gear
+						"4.72": [0, 0, 0],
+						"4.92": [0, 0, 110],
+						//4th gear
+						"9.72": [0, 0, 0],
+						"10.0": [0, 0, 115],
+						//5th gear
+						"13.84": [0, 0, 0],
+						"14.0": [0, 0, 120],
+
+						"17.64": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.p959.meter_player": {
+			"loop": true,
+			"bones": {
+				"speedmeter": {
+					"position": [0, 0, 1]
+					},
+				"rpm_meter": {
+					"position": [0, 0, 1]
+					},
+				"tempmeter": {
+					"position": [0, 0, 1]
+					}
+				}
+			},
+		"animation.p959.meter_player2": {
+			"loop": true,
+			"bones": {
+				"speedmeter2": {
+					"position": [0, 0, -1]
+					},
+				"rpm_meter2": {
+					"position": [0, 0, -1]
+					},
+				"tempmeter2": {
+					"position": [0, 0, -1]
+					}	
+				}
+			},
+		"animation.p959.open": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+               "0.0": { "effect": "open" }
+            }
+		},
+		"animation.p959.close": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+               "0.0": { "effect": "close" }
+            }
+		},
+		"animation.p959.wipers": {
+			"loop": true,
+			"animation_length": 0.6,
+			"bones": {
+				"wiper1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3": [-8.4416, 27.0292, 34.1387],
+						"0.6": [0, 0, 0]
+					}
+				},
+				"wiper2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3": [-8.4416, 27.0292, 34.1387],
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.p959.down": {
+			"loop": true,
+			"bones": {
+				"porsche959": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * -1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.p959.up": {
+			"loop": true,
+			"bones": {
+				"porsche959": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * 1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+playanimation @e[r=1,family=81impala] animation.81impala.meter1 animation.81impala.meter1 0 "!query.is_moving"

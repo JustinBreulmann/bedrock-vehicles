@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "lp400s:yellow_b2_open",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/countach_lp400s/yellow_b"
+			},
+			"geometry": {
+				"default": "geometry.countach_lp400s_m2_open"
+			},
+			"render_controllers": [
+				"controller.render.countach_lp400"
+			],
+			"animations": {
+				"drive": "animation.countach_lp400.drive",
+				"turning": "animation.countach_lp400.turning",
+				"door": "animation.countach_lp400.door",
+				"open": "animation.countach_lp400.open",
+				"meter_player": "animation.countach_lp400.meter_player",
+				"meter_player2": "animation.countach_lp400.meter_player2",
+				"wipers": "animation.countach_lp400.wipers"
+			},
+			"sound_effects": {
+        		"open": "vehicle.countach_lp400.dooropen"
+      		},
+			"spawn_egg": {
+				"texture": "countach_lp400",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.countach_lp400.general2"
+				}
+			]
+		}
+	}
+}

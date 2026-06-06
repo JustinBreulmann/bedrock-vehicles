@@ -1,0 +1,1 @@
+playanimation @s animation.mb_300sl.meter1 animation.mb_300sl.meter1 0 "!query.is_moving"

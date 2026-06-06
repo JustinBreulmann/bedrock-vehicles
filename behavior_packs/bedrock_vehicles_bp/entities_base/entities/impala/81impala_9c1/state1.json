@@ -1,0 +1,236 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "81impala:9c11",
+			"is_summonable": true,
+			"properties": {
+				"example:door_open": {
+				  "type": "bool",
+				  "default": false,
+				  "client_sync": true
+				},
+				"example:tunk_open": {
+					"type": "bool",
+					"default": false,
+					"client_sync": true
+				  }
+			}
+		},
+		"component_groups": {
+			"door_open": {
+        		"minecraft:transformation": {
+          		"into": "81impala:9c12",
+          		"preserve_equipment": true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"hood_open": {
+        		"minecraft:transformation": {
+          		"into": "81impala:9c11_open",
+          		"delay": 0.1
+       			 }
+    		},
+			"maroon": {
+				"minecraft:transformation": {
+					"into": "81impala:maroon",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"white": {
+				"minecraft:transformation": {
+					"into": "81impala:white",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"black": {
+				"minecraft:transformation": {
+					"into": "81impala:black",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 1.5
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "red_dye"
+								}
+							]
+						},
+						"event": "turn_red"
+					},
+					"use_item": true,
+					"interact_text": "Colour"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "block:brush"
+								}
+							]
+						},
+						"event": "colour"
+					},
+					"use_item": true,
+					"interact_text": "Colour"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "black_dye"
+								}
+							]
+						},
+						"event": "turn_black"
+					},
+					"use_item": true,
+					"interact_text": "Colour"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "white_dye"
+								}
+							]
+						},
+						"event": "turn_white"
+					},
+					"use_item": true,
+					"interact_text": "Colour"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_open"
+					},
+					"use_item": false,
+					"interact_text": "Pop the hood"
+				},
+				{
+					"on_interact": {
+						"filters": { 
+							"test": "bool_property", 
+							"operator": "!=", 
+							"domain": "example:open_door" 
+						  }, 
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Tür öffnen"
+				},
+				{
+					"on_interact": {
+						"filters": { 
+							"test": "bool_property", 
+							"domain": "example:open_door" 
+						  }, 
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Tür öffnen"
+				}
+			]
+		},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": true
+			}
+		},
+
+		"events": {
+			"minecraft:entity_transformed": {
+			},
+			"door_open": {
+				"set_property": { 
+					"minecraft:open_door": true 
+				  },				
+
+
+        		"add": {
+          			"component_groups": [
+            			"door_open"
+          			]
+        		}
+      		},
+      		"hood_open": {
+        		"add": {
+          			"component_groups": [
+            			"hood_open"
+          			]
+        		}
+      		},
+			  "turn_black": {
+				"add": {
+					"component_groups": [
+						"black"
+					]
+				}
+			},
+			"turn_red": {
+				"add": {
+					"component_groups": [
+						"red"
+					]
+				}
+			},
+			"turn_white": {
+				"add": {
+					"component_groups": [
+						"white"
+					]
+				}
+			}
+		}
+	}
+}

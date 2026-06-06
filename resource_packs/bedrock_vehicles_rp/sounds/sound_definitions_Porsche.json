@@ -1,0 +1,47 @@
+{
+	"vehicle.p959.drive": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/p959/drive"
+		]
+	},
+	"vehicle.p959.adv_drive": {
+		"category": "ui",
+		"sounds": [
+		  "sounds/p959/adv_drive"
+		]
+	},
+	"vehicle.p959.startup": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/p959/startup"
+		]
+	},
+	"vehicle.p959.doorclose": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/p959/doorclose"
+		]
+	},
+	"vehicle.p959.dooropen": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/p959/dooropen"
+		]
+	},
+	"vehicle.p959.hood": {
+		"category": "neutral",
+		"sounds": [
+		  "sounds/p959/hood"
+		]
+	},
+	"vehicle.p959.hit" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+            "sounds/p959/hit1",
+            "sounds/p959/hit2",
+            "sounds/p959/hit3"
+        ]
+    }
+}

@@ -1,0 +1,245 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "bmw320ie30:black",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"explode"
+			]
+		},
+		"animations": {
+			"explode": "controller.animation.bmw320ie30_explode"
+			}
+		},
+		"component_groups": {
+			"door_open": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:black2",
+				  "preserve_equipment" : true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"hood_open": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:black_open",
+				  "preserve_equipment" : true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"red": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:red",
+				  "preserve_equipment" : true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"gray": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:gray",
+				  "preserve_equipment" : true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"white": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:white",
+				  "preserve_equipment" : true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"silver": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:silver",
+				  "preserve_equipment" : true,
+          		"delay": 0.1
+       			 }
+    		}
+		},
+		"components": {
+			"minecraft:inventory" :{
+				"container_type": "minecart_chest",
+				"inventory_size": 27,
+				"can_be_siphoned_from": true
+			},
+			"minecraft:can_power_jump": {
+			},
+			"minecraft:horse.jump_strength": {
+				"value": {
+				  "range_min": 1,
+				  "range_max": 1
+				}
+			},
+			"minecraft:nameable": {       "always_show": false,
+			"allow_name_tag_renaming": false},
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 1
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "white_dye"
+								}
+							]
+						},
+						"event": "white"
+					},
+					"use_item": true,
+					"interact_text": "Paint white"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "red_dye"
+								}
+							]
+						},
+						"event": "red"
+					},
+					"use_item": true,
+					"interact_text": "Paint red"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "gray_dye"
+								}
+							]
+						},
+						"event": "gray"
+					},
+					"use_item": true,
+					"interact_text": "Paint gray"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "light_gray_dye"
+								}
+							]
+						},
+						"event": "silver"
+					},
+					"use_item": true,
+					"interact_text": "Paint silver"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_open"
+					},
+					"use_item": false,
+					"interact_text": "Open Trunk"
+				},
+				{
+					"on_interact": {
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Open Door"
+				}
+			]
+		},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": true
+			}
+		},
+
+		"events": {
+			"door_open": {
+        		"add": {
+          			"component_groups": [
+            			"door_open"
+          			]
+        		}
+      		},
+      		"hood_open": {
+        		"add": {
+          			"component_groups": [
+            			"hood_open"
+          			]
+        		}
+      		},
+      		"white": {
+        		"add": {
+          			"component_groups": [
+            			"white"
+          			]
+        		}
+      		},
+      		"red": {
+        		"add": {
+          			"component_groups": [
+            			"red"
+          			]
+        		}
+      		},
+      		"gray": {
+        		"add": {
+          			"component_groups": [
+            			"gray"
+          			]
+        		}
+      		},
+      		"silver": {
+        		"add": {
+          			"component_groups": [
+            			"silver"
+          			]
+        		}
+      		}
+		}
+	}
+}

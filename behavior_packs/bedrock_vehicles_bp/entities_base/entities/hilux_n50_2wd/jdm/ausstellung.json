@@ -1,0 +1,70 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hiluxn50:ausstellung",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"startup",
+					"seat",
+					"explode"
+			]
+		},
+		"animations": {
+			"startup": "controller.animation.hiluxn50_startup",
+			"seat": "controller.animation.hiluxn50_seat",
+			"explode": "controller.animation.hiluxn50_explode"
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars",
+					"ausstellung"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 1
+			},
+			"minecraft:health": {
+				"value": 0.5
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_sneaking",
+										"subject": "player",
+										"value": true
+									}
+								]
+							}
+						},
+						"use_item": false,
+						"interact_text": "Fahrzeug kaufen"
+						}
+					]
+				},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": true
+			}
+		}
+	}
+}

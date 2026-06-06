@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.spitfiremk4_meter": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"meter": "query.modified_move_speed"
+						}
+					]
+				},
+				"meter": {
+					"transitions": [
+						{
+							"default": "!query.modified_move_speed"
+						}
+					],
+					"on_entry": [
+						"/function spitfiremk4meter"
+					]
+				}
+			}
+		}
+	}
+}

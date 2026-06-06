@@ -1,0 +1,17 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.jet_ski": {
+            "arrays": {
+                "textures": {
+                    "Array.skins": ["Texture.blue", "Texture.red", "Texture.lime", "Texture.orange", "Texture.purple", "Texture.yellow", "Texture.gray", "Texture.magenta", "Texture.brown", "Texture.white", "Texture.cyan", "Texture.green", "Texture.black", "Texture.lightblue", "Texture.pink", "Texture.lightgray"]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [{
+                "*": "Material.default"
+            }],
+            "textures": ["Array.skins[query.variant]"]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "p959:orange",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/p959/orange"
+			},
+			"geometry": {
+				"default": "geometry.porsche_959_m1"
+			},
+			"render_controllers": [
+				"controller.render.p959"
+			],
+			"animations": {
+				"drive": "animation.p959.drive",
+				"turning": "animation.p959.turning",
+				"close": "animation.p959.close"
+			},
+			"sound_effects": {
+        		"close": "vehicle.p959.doorclose"
+      		},
+			"spawn_egg": {
+				"texture": "p959",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.p959.general1"
+				}
+			]
+		}
+	}
+}

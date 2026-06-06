@@ -1,0 +1,230 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "p959:orange",
+			"is_spawnable":false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"explode"
+			]
+		},
+		"animations": {
+			"explode": "controller.animation.p959_explode"
+			}
+		},
+		"component_groups": {
+			"door_open": {
+        		"minecraft:transformation": {
+          		"into": "p959:orange2",
+          		"delay": 0.1
+       			 }
+    		},
+			"orange": {
+				"minecraft:transformation": {
+					"into": "p595:orange",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"red": {
+				"minecraft:transformation": {
+					"into": "p595:red",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"silver": {
+				"minecraft:transformation": {
+					"into": "p595:silver",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"white": {
+				"minecraft:transformation": {
+					"into": "p595:white",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"green": {
+				"minecraft:transformation": {
+					"into": "p595:green",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 0.97
+			},
+			"minecraft:collision_box": {
+				"width": 1.45,
+				"height": 0.8
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "green_dye"
+								}
+							]
+						},
+						"event": "turn_green"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "orange_dye"
+								}
+							]
+						},
+						"event": "turn_orange"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "red_dye"
+								}
+							]
+						},
+						"event": "turn_red"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "light_gray_dye"
+								}
+							]
+						},
+						"event": "turn_silver"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "white_dye"
+								}
+							]
+						},
+						"event": "turn_white"
+					},
+					"use_item": true,
+					"interact_text": "Lackieren"
+				},
+				{
+					"on_interact": {
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Open Door"
+				}
+			]
+		},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": true
+			}
+		},
+
+		"events": {
+			"door_open": {
+        		"add": {
+          			"component_groups": [
+            			"door_open"
+          			]
+        		}
+      		},
+			  "turn_orange": {
+				"add": {
+					"component_groups": [
+						"orange"
+					]
+				}
+			},
+			"turn_green": {
+				"add": {
+					"component_groups": [
+						"green"
+					]
+				}
+			},
+			"turn_red": {
+				"add": {
+					"component_groups": [
+						"red"
+					]
+				}
+			},
+			"turn_silver": {
+				"add": {
+					"component_groups": [
+						"silver"
+					]
+				}
+			},
+			"turn_white": {
+				"add": {
+					"component_groups": [
+						"white"
+					]
+				}
+			}
+		}
+	}
+}

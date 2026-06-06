@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Bedrock Vehicles | RP",
+    "description": "High-fidelity driveable vehicle collection (BMW E30, Hilux N50, Impala 81, Peterbilt 389, Porsche 959, Countach LP400, Firetruck, Spitfire Mk4, Jet Ski, Helicopters) with realistic physics, horns, fuel and mechanics",
+    "uuid": "c2a5ea5d-cddd-44d9-b2cb-0c6f944c98da",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "086d6a30-5230-47bd-a44d-e37c827faf6c",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "326866f7-e3ce-47bb-b34f-d2008dae1381",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

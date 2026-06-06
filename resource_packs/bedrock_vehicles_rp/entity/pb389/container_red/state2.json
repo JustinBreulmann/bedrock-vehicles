@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "peterbilt389:container_red2",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/pb389/red"
+			},
+			"geometry": {
+				"default": "geometry.peterbilt389_container_m2"
+			},
+			"render_controllers": [
+				"controller.render.general_heavy"
+			],
+			"animations": {
+				"drive": "animation.pb389.drive",
+				"turning": "animation.pb389.turning",
+				"door": "animation.pb389.door",
+				"open": "animation.pb389.open",
+				"meter_player": "animation.pb389.meter_player",
+				"meter_player2": "animation.pb389.meter_player2",
+				"wipers": "animation.pb389.wipers",
+				"up": "animation.pb389.up",
+				"down": "animation.pb389.down"
+			},
+			"sound_effects": {
+        		"open": "vehicle.general_heavy.dooropen"
+      		},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.pb389.general2"
+				}
+			]
+		}
+	}
+}

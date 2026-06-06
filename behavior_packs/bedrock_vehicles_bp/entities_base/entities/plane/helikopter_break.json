@@ -1,0 +1,140 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "plane:helikopter_break",
+      "scripts": {
+        "animate": [
+          "repair_controller",
+          "death_controller"
+        ]
+      },
+      "animations": {
+        "repair_controller": "controller.animation.helikopter_break.repair",
+        "death_controller": "controller.animation.helikopter_break.death",
+        "death": "animation.helikopter_break.death",
+        "fixed": "animation.helikopter_break.fixed",
+        "repair": "animation.helikopter_break.repair"
+      },
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "repair": {
+        "minecraft:skin_id": {
+          "value": 1
+        },
+        "minecraft:transformation": {
+          "into": "plane:helikopter",
+          "drop_equipment": true,
+          "delay": {
+              "value": 3
+          }
+        }
+      },
+      "dead": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:scale": {
+        "value": 1.1
+      },
+      "minecraft:interact": {
+        "interactions": [
+            {
+                "on_interact": {
+                    "filters": {
+                        "all_of": [
+                            {
+                              "test": "in_water",
+                              "subject": "self",
+                              "operator": "!=",
+                              "value": true
+                            },
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
+                            },
+                            {
+                                "test": "has_equipment",
+                                "domain": "hand",
+                                "subject": "other",
+                                "value": "plane:repair"
+                              }
+                            ]
+                        },
+                        "event": "turn_new",
+                        "target": "self"
+                    },
+                "use_item": true,
+                "swing": true,
+                "play_sounds": "random.anvil_use"
+            }
+        ]
+    },
+      "minecraft:breathable": {
+        "total_supply": 0,
+        "suffocate_time": 1,
+        "breathes_air": true,
+        "breathes_water": false
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:type_family": {
+        "family": [ "helikopter_break", "engine" ]
+      },
+      "minecraft:collision_box": {
+        "width": 3.5,
+        "height": 3.5
+      },
+      "minecraft:health": {
+        "value": 40,
+        "max": 40
+      },
+      "minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+  },
+
+"events": {
+  "turn_new": {
+    "add": {
+      "component_groups": [
+        "repair"
+      ]
+    }
+  },
+  "turn_dead": {
+    "add": {
+      "component_groups": [
+        "dead"
+      ]
+    }
+  }
+       }
+     }
+  }

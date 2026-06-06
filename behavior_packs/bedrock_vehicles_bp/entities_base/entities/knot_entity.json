@@ -1,0 +1,157 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "exp:knot_entity",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+			"scripts": {
+				"animate": [
+					"remove"
+				]
+			},
+			"animations": {
+				"remove": "controller.animation.knot"
+			}
+    },
+    "component_groups": {
+	"minecraft:kill": {
+	  "minecraft:despawn": {
+	    "filters": {
+		  "all_of": [
+		    { "test": "is_family", "subject": "self", "value": "placeholder" }
+		  ]
+		 }
+	  }
+	},
+	"minecraft:remove": {
+	  "minecraft:is_saddled": {}
+	},
+	"minecraft:start": {
+          "minecraft:collision_box": {
+            "width": 0.5,
+            "height": 0.5
+          }
+	},
+	"minecraft:small": {
+          "minecraft:collision_box": {
+            "width": 0.0,
+            "height": 0.0
+          }
+	}
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "placeholder" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:movement": {
+        "value": 0.0
+      },
+        "minecraft:leashable": {
+          "soft_distance": 16.0,
+          "hard_distance": 16.0,
+          "max_distance": 16.0,
+          "on_leash": {
+            "event": "minecraft:small",
+            "target": "self"
+          },
+          "on_unleash": {
+            "event": "minecraft:start",
+            "target": "self"
+          }
+        },
+      "minecraft:fire_immune": true,
+      "minecraft:environment_sensor": {
+        "triggers": [
+         {
+          "filters": {
+            "all_of": [
+              {
+                "test": "has_tag",
+                "subject": "self",
+                "operator": "=",
+                "value": "kill"
+              }
+            ]
+          },
+          "event": "minecraft:kill"
+         }
+       ]
+     },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+	      "has_gravity": false
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 100,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:remove",
+                "minecraft:start"
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:kill": {
+        "add": {
+          "component_groups": [
+            "minecraft:kill"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:remove"
+          ]
+        }
+      },
+      "minecraft:start": {
+        "add": {
+          "component_groups": [
+            "minecraft:start"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:small"
+          ]
+        }
+      },
+      "minecraft:small": {
+        "add": {
+          "component_groups": [
+            "minecraft:small"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:start"
+          ]
+        }
+      }
+    }
+  }
+}

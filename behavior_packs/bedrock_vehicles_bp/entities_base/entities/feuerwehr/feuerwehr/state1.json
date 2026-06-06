@@ -1,0 +1,131 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "firetruck:state1",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"startup",
+					"seat",
+					"meter"
+				]
+		},
+		"animations": {
+			"startup": "controller.animation.pb389_startup",
+			"seat": "controller.animation.pb389_seat",
+			"meter": "controller.animation.pb389_meter"
+			}
+		},
+		"component_groups": {
+    		"hood_open": {
+        		"minecraft:transformation": {
+          		"into": "firetruck:state2",
+          		"delay": 0.1,
+				"keep_owner":true
+       			 }
+    		}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars",
+					"feuerwehr",
+					"firetruck"
+				]
+			},
+			"minecraft:inventory": {
+				"container_type": "container",
+				"inventory_size": 64,
+				"private": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 3.9
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:movement": {
+				"value": 0.19
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:physics": {},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"crouching_skip_interact": true,
+				"interact_text": "Drive",
+				"family_types": [
+					"player",
+					"villager",
+					"npc"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.6,
+							1.30,
+							2.2
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					},
+					{
+						"position": [
+							-1.3,
+							1.30,
+							2.2
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_open"
+					},
+				"use_item": false,
+				"interact_text": "Tür öffnen"
+				}
+			]
+		},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+      		"hood_open": {
+        		"add": {
+          			"component_groups": [
+            			"hood_open"
+          			]
+        		}
+      		}
+		}
+	}
+}

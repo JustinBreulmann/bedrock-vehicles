@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "peterbilt389:betonmischer2",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/pb389/silver"
+			},
+			"geometry": {
+				"default": "geometry.peterbilt389_betonmischer_m2"
+			},
+			"render_controllers": [
+				"controller.render.pb389"
+			],
+			"animations": {
+				"drive": "animation.pb389.drive",
+				"turning": "animation.pb389.turning",
+				"door": "animation.pb389.door",
+				"open": "animation.pb389.open",
+				"meter_player": "animation.pb389.meter_player",
+				"meter_player2": "animation.pb389.meter_player2",
+				"wipers": "animation.pb389.wipers"
+			},
+			"sound_effects": {
+        		"open": "vehicle.pb389.dooropen"
+      		},
+			"spawn_egg": {
+				"texture": "pb389",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.pb389.general2"
+				}
+			]
+		}
+	}
+}

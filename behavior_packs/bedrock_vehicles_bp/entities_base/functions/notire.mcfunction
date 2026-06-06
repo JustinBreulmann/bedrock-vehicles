@@ -1,0 +1,1 @@
+execute as @e[tag=notire] run effect @s slowness 10 5 true

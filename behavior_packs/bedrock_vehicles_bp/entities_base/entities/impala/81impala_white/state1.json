@@ -1,0 +1,157 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "81impala:white",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"door_open": {
+        		"minecraft:transformation": {
+          		"into": "81impala:white2",
+          		"preserve_equipment": true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"hood_open": {
+        		"minecraft:transformation": {
+          		"into": "81impala:white_open",
+          		"delay": 0.1
+       			 }
+    		},
+			"red": {
+				"minecraft:transformation": {
+					"into": "81impala:maroon",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			},
+			"black": {
+				"minecraft:transformation": {
+					"into": "81impala:black",
+					"delay": 0.1,
+					"keep_owner": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 1.5
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "red_dye"
+								}
+							]
+						},
+						"event": "turn_red"
+					},
+					"use_item": true,
+					"interact_text": "Colour"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "black_dye"
+								}
+							]
+						},
+						"event": "turn_black"
+					},
+					"use_item": true,
+					"interact_text": "Colour"
+				},
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_open"
+					},
+					"use_item": false,
+					"interact_text": "Pop the hood"
+				},
+				{
+					"on_interact": {
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Open Door"
+				}
+			]
+		},
+		"minecraft:pushable": {
+			"is_pushable": false,
+			"is_pushable_by_piston": true
+			}
+		},
+
+		"events": {
+			"minecraft:entity_transformed": {
+			},
+			"door_open": {
+        		"add": {
+          			"component_groups": [
+            			"door_open"
+          			]
+        		}
+      		},
+      		"hood_open": {
+        		"add": {
+          			"component_groups": [
+            			"hood_open"
+          			]
+        		}
+      		},
+			  "turn_black": {
+				"add": {
+					"component_groups": [
+						"black"
+					]
+				}
+			},
+			"turn_red": {
+				"add": {
+					"component_groups": [
+						"red"
+					]
+				}
+			}
+		}
+	}
+}

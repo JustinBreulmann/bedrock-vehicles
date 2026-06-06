@@ -1,0 +1,60 @@
+{
+	"format_version" : "1.12.0",
+	"animation_controllers" : {
+		"controller.animation.helikopter.ride" : {
+			"initial_state" : "standing",
+			"states" : {
+				"standing" : {
+					"on_entry": ["/effect @s clear", "/tag @s remove hasrider", "/tag @s add random"],
+					"on_exit": ["/playsound step.shroomlight @a[r=10] ~~~ 1 2"],
+					"animations": ["off"],
+					"transitions": [
+						{
+							"on_ground": "query.has_rider && query.is_on_ground && !query.is_in_water"
+						}
+					]
+				},
+				"on_ground": {
+					"on_entry": ["/tag @s add slow", "/tag @s add hasrider"],
+					"animations": ["on_ground"],
+					"transitions": [
+						{
+							"standing": "!query.has_rider || query.is_in_water"
+						},
+						{
+							"flying": "!query.is_on_ground && query.has_rider"
+						}
+					]
+				},
+				"flying": {
+					"on_entry": ["/tag @s remove slow"],
+					"on_exit": ["/effect @s clear", "/playsound step.shroomlight @a[r=10] ~~~ 1 0.8"],
+					"animations": ["on_fly"],
+					"transitions": [
+						{
+							"on_ground": "query.is_on_ground && query.has_rider"
+						},
+						{
+							"standing": "!query.has_rider  || query.is_in_water"
+						}
+					]
+				}
+			}
+		},
+				"controller.animation.helikopter.death" : {
+					"initial_state" : "alive",
+					"states" : {
+						"alive" : {
+							"on_exit": ["/event entity @s plane:dead_helikopter"],
+							"transitions": [
+								{
+									"death1": "!query.is_alive"
+								}
+							]
+						},
+						"death1": {
+						}
+					}
+				}
+			}
+		}

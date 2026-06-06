@@ -1,0 +1,307 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.hiluxn50.turning": {
+			"loop": true,
+			"bones": {
+				"fronttire1": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fronttire2": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fb_left": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fb_right": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"steeringwheel": {
+					"rotation": [0, 0, "Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*-1"]
+				}
+			}
+		},
+		"animation.hiluxn50.drive": {
+			"loop": true,
+			"animation_length": 0.1667,
+			"bones": {
+				"fronttire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"fronttire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"backtires": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"radiator_fan": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [0, 0, 180]
+					}
+				},
+				"pecutan": {
+					"position": [0, -1, 0]
+				}
+			}
+		},
+		"animation.hiluxn50.door": {
+			"loop": true,
+			"bones": {
+				"leftdoor": {
+					"rotation": [0, -45, 0]
+				},
+				"rightdoor": {
+					"rotation": [0, 45, 0]
+				}
+			}
+		},
+		"animation.hiluxn50.meter1": {
+			"loop": false,
+			"bones": {
+				"speedmeter": {
+					"rotation": {
+						"0.0": [0, 0, 195],
+						"21": [0, 0, 0]
+					}
+				},
+				"rpm_meter": {
+					"rotation": {
+						//first gear
+						"0.0": [0, 0, 185],
+						//second gear
+						"3": [0, 0, 0],
+						"3.2": [0, 0, 185],
+						//third gear
+						"6.5": [0, 0, 0],
+						"6.7": [0, 0, 185],
+						//4th gear
+						"10.5": [0, 0, 0],
+						"10.7": [0, 0, 185],
+						//5th gear
+						"14.5": [0, 0, 0],
+						"14.7": [0, 0, 185],
+
+						"19.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.hiluxn50.meter_player": {
+			"loop": true,
+			"bones": {
+				"speedmeter": {
+					"position": [0, 0, 1]
+				},
+				"rpm_meter": {
+					"position": [0, 0, 1]
+				}
+			}
+		},
+		"animation.hiluxn50.meter_player2": {
+			"loop": true,
+			"bones": {
+				"speedmeter2": {
+					"position": [0, 0, -1]
+				},
+				"rpm_meter2": {
+					"position": [0, 0, -1]
+				}
+			}
+		},
+		"animation.hiluxn50.open": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "open"
+				}
+			}
+		},
+		"animation.hiluxn50.close": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "close"
+				}
+			}
+		},
+		"animation.hiluxn50.hood": {
+			"loop": false,
+			"bones": {
+				"hood": {
+					"rotation": {
+						"0.0": [50, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"hood_strut2": {
+					"rotation": {
+						"0.0": [-25, 90, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.hiluxn50.hood2": {
+			"loop": false,
+			"bones": {
+				"hood": {
+					"rotation": {
+						"0.0": [-50, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"hood_strut2": {
+					"rotation": {
+						"0.0": [0, 90, 0],
+						"0.01": [25, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "close"
+				}
+			}
+		},
+		"animation.hiluxn50.backdoor": {
+			"loop": false,
+			"bones": {
+				"ldoor_left": {
+					"rotation": {
+						"0.0": [0, -115, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"ldoor_right": {
+					"rotation": {
+						"0.0": [0, 115, 0],
+						"0.72": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.hiluxn50.backdoor2": {
+			"loop": false,
+			"bones": {
+				"ldoor_left": {
+					"rotation": {
+						"0.0": [0, 115, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"ldoor_right": {
+					"rotation": {
+						"0.0": [0, -115, 0],
+						"0.72": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "close"
+				}
+			}
+		},
+		"animation.hiluxn50.wipers": {
+			"loop": true,
+			"animation_length": 0.6,
+			"bones": {
+				"wiper1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3": [-9.0165, -25.4967, -38.4268],
+						"0.6": [0, 0, 0]
+					}
+				},
+				"wiper2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3": [-9.0165, -25.4967, -38.4268],
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.hiluxn50.down": {
+			"loop": true,
+			"bones": {
+				"hilux_n50": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * -1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"glass2": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * -1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.hiluxn50.up": {
+			"loop": true,
+			"bones": {
+				"hilux_n50": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * 1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"glass2": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * 1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

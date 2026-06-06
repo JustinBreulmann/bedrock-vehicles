@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "id:roadroller",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/roadroller"
+			},
+			"geometry": {
+				"default": "geometry.roadroller"
+			},
+			"render_controllers": [
+				"controller.render.roadroller"
+			],
+			"animations": {
+				"move": "animation.roadroller.run"
+			},
+			"animation_controllers": [ 
+				{ "general": "controller.animation.roadroller.general" }
+				]
+			}
+		}
+	}

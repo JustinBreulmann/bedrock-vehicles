@@ -1,0 +1,1 @@
+playanimation @a[r=1] animation.player.ashminggu_low.drive controller.animation.player.base 0 "!query.is_riding"

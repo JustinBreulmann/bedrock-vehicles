@@ -1,0 +1,73 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "peterbilt389:betonmischer1",
+			"is_spawnable":false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"door_open": {
+				"minecraft:transformation": {
+					"into": "peterbilt389:betonmischer2",
+					"delay": 0.1,
+					"keep_owner": true
+					}
+				}
+			},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"peterbilt389_static",
+					"baustelle"
+				]
+			},
+			"minecraft:inventory": {
+				"container_type": "container",
+				"inventory_size": 54,
+				"private": false
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 3.9
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "door_open"
+						},
+						"use_item": false,
+						"interact_text": "Open door"
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"door_open": {
+				"add": {
+					"component_groups": [
+						"door_open"
+					]
+				}
+			}
+		}
+	}
+}

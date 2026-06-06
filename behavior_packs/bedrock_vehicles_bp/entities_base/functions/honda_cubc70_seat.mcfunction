@@ -1,0 +1,1 @@
+playanimation @p[r=1.5] animation.player.honda_cubc70.ride controller.animation.player.base 0 "!query.is_riding"

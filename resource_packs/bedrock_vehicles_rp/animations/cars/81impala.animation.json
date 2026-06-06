@@ -1,0 +1,140 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.81impala.turning": {
+			"loop": true,
+			"bones": {
+				"fronttire1": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fronttire2": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"steeringwheel": {
+					"rotation": [0, 0, "Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*-1"]
+				}
+			}
+		},
+		"animation.81impala.drive": {
+			"loop": true,
+			"animation_length": 0.1667,
+			"bones": {
+				"fronttire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"fronttire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"backtires": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"pecutan": {
+					"position": [0, -1, 0]
+				}
+			}
+		},
+		"animation.81impala.door": {
+			"loop": true,
+			"bones": {
+				"leftdoor": {
+					"rotation": [0, -45, 0]
+					},
+				"rightdoor": {
+					"rotation": [0, 45, 0]
+					}	
+				}
+			},
+		"animation.81impala.meter1": {
+			"loop": false,
+			"bones": {
+				"speedmeter": {
+					"position": {
+						"0.0": [4.4, 0, 0],
+						"5.12": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.81impala.meter_player": {
+			"loop": true,
+			"bones": {
+				"speedmeter": {
+					"position": [0, 0, 1]
+					}
+				}
+			},
+		"animation.81impala.meter_player2": {
+			"loop": true,
+			"bones": {
+				"speedmeter2": {
+					"position": [0, 0, -1]
+					}	
+				}
+			},
+		"animation.81impala.open": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.81impala.hood": {
+			"loop": false,
+			"bones": {
+				"hood": {
+					"rotation": {
+						"0.0": [60, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.81impala.hood2": {
+			"loop": false,
+			"bones": {
+				"hood": {
+					"rotation": {
+						"0.0": [-60, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.81impala.close": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

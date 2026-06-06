@@ -1,0 +1,253 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "plane:smallplane",
+      "scripts": {
+        "animate": [
+          "ride_controller",
+          "death_controller"
+        ]
+      },
+      "animations": {
+        "ride_controller": "controller.animation.smallplane.ride",
+        "death_controller": "controller.animation.smallplane.death",
+        "on_ground": "animation.smallplane.on_ground",
+        "on_wait": "animation.smallplane.on_wait",
+        "on_fly": "animation.smallplane.on_fly",
+        "off": "animation.smallplane.off"
+      },
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+
+      "ted_random": {
+        "minecraft:rideable": {
+          "pull_in_entities": true,
+          "seat_count": 1,
+          "interact_text": "action.interact.mount",
+          "family_types": [
+            "player"
+          ],
+          "seats": [
+            {
+              "position": [ 0, 1.45, -0.85 ],
+              "min_rider_count": 0,
+              "max_rider_count": 1
+            }
+          ]
+        },
+        "minecraft:conditional_bandwidth_optimization": {
+        }
+      },
+
+      "ted_saddled": {
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.player_ride_tamed": {
+          "priority": 0
+        },
+        "minecraft:is_saddled": {
+        },
+        "minecraft:rideable": {
+          "pull_in_entities": true,
+          "seat_count": 1,
+          "interact_text": "action.interact.mount",
+          "family_types": [
+            "player"
+          ],
+          "seats": [
+            {
+              "position": [ 0, 1.45, -0.85 ],
+              "min_rider_count": 0,
+              "max_rider_count": 1
+            }
+          ]
+        },
+        "minecraft:can_power_jump":  {
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:jump.static": {},
+        "minecraft:horse.jump_strength": {
+          "value": {
+            "range_min": 1,
+            "range_max": 1
+          }
+        },
+        "minecraft:navigation.walk": {
+          "is_amphibious": false,
+          "can_path_over_water": false,
+          "can_swim": false,
+          "can_sink": true,
+          "can_fly": true
+        },
+        "minecraft:movement.generic": {
+        },
+        "minecraft:conditional_bandwidth_optimization": {
+        },
+        "minecraft:input_ground_controlled": {
+        }
+      },
+      "ted_dead": {
+        "minecraft:transformation": {
+          "into": "plane:smallplane_break"
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:scale": {
+        "value": 1.1
+      },
+      "minecraft:collision_box": {
+        "width": 1.8,
+        "height": 1.8
+      },
+      "minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+      "minecraft:behavior.rise_to_liquid_level": {
+        "liquid_y_offset": 0,
+        "rise_delta": -0.1,
+        "sink_delta": 0.1
+      },
+      "minecraft:breathable": {
+        "total_supply": 10,
+        "suffocate_time": 1,
+        "breathes_air": true,
+        "breathes_water": false
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "rider_count",
+                        "operator": "not",
+                        "value": 0
+                    },
+                    {
+                        "test": "in_water",
+                        "operator": "!=",
+                        "value": true
+                    }
+                ]
+            },
+            "event": "plane:start_flying"
+        },
+        {
+          "filters": {
+              "all_of": [
+                  {
+                      "test": "rider_count",
+                      "operator": "equals",
+                      "value": 0
+                  },
+                  {
+                      "test": "in_water",
+                      "operator": "!=",
+                      "value": true
+                  }
+              ]
+          },
+          "event": "plane:stop_flying"
+        },
+          {
+            "filters": {
+              "test": "in_water",
+              "operator": "equals",
+              "value": true
+            },
+            "event": "plane:in_water"
+          }
+        ]
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:type_family": {
+        "family": [ "smallplane", "engine" ]
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+  },
+
+"events": {
+  "minecraft:entity_spawned": {
+    "add": {
+      "component_groups": [
+        "ted_random"
+      ]
+    }
+  },
+  "plane:start_flying": {
+        "remove": {
+          "component_groups": [
+            "ted_random"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ted_saddled",
+            "plane:start_flying"
+          ]
+        }
+      },
+  "plane:stop_flying": {
+        "remove": {
+          "component_groups": [
+            "plane:start_flying",
+            "function water",
+            "ted_saddled"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ted_random",
+            "plane:stop_flying"
+          ]
+        }
+      },
+      "plane:dead_smallplane":{
+        "add": {
+          "component_groups": [
+            "ted_dead"
+          ]
+        }
+      },
+      "plane:in_water": {
+        "remove": {
+          "component_groups": [
+            "ted_saddled",
+            "ted_random"
+          ]
+        }
+      }
+  }
+  }
+}

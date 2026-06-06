@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "lp400s:orange_open",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/countach_lp400s/orange_b"
+			},
+			"geometry": {
+				"default": "geometry.countach_lp400s_m1_open"
+			},
+			"render_controllers": [
+				"controller.render.countach_lp400"
+			],
+			"animations": {
+				"drive": "animation.countach_lp400.drive",
+				"turning": "animation.countach_lp400.turning",
+				"popups": "animation.countach_lp400.popups"
+			},
+			"sound_effects": {
+        		"open": "vehicle.countach_lp400.popups"
+      		},
+			"spawn_egg": {
+				"texture": "countach_lp400",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.countach_lp400.general3"
+				}
+			]
+		}
+	}
+}

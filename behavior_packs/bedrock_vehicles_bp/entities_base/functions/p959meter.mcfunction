@@ -1,0 +1,1 @@
+playanimation @s animation.p959.meter1 animation.p959.meter1 0 "!query.is_moving"

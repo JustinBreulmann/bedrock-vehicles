@@ -1,0 +1,261 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bmw320ie30.turning": {
+			"loop": true,
+			"bones": {
+				"fronttire1": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fronttire2": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fbl": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fbr": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"steeringwheel": {
+					"rotation": [0, 0, "Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*-1"]
+				}
+			}
+		},
+		"animation.bmw320ie30.drive": {
+			"loop": true,
+			"animation_length": 0.1667,
+			"bones": {
+				"fronttire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"fronttire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"backtire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"backtire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [180, 0, 0]
+					}
+				},
+				"pecutan": {
+					"position": [0, -1, 0]
+				}
+			}
+		},
+		"animation.bmw320ie30.door": {
+			"loop": true,
+			"bones": {
+				"leftdoor": {
+					"rotation": [0, -45, 0]
+				},
+				"rightdoor": {
+					"rotation": [0, 45, 0]
+				}
+			}
+		},
+		"animation.bmw320ie30.meter1": {
+			"loop": false,
+			"bones": {
+				"tempmeter": {
+					"rotation": {
+						"20": [0, 0, 0],
+						"0.0": [0, 0, 50]
+					}
+				},
+				"speedmeter": {
+					"rotation": {
+						"14": [0, 0, 0],
+						"0.0": [0, 0, 242.5]
+					}
+				},
+				"rpm_meter": {
+					"rotation": {
+						"2": [0, 0, 0],
+						"0.0": [0, 0, 175],
+						"2.2": [0, 0, 175],
+						"4.5": [0, 0, 0],
+						"4.7": [0, 0, 175],
+						"7.0": [0, 0, 0],
+						"7.2": [0, 0, 175],
+						"10.0": [0, 0, 0],
+						"10.2": [0, 0, 175],
+						"14.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.bmw320ie30.meter_player": {
+			"loop": true,
+			"bones": {
+				"speedmeter": {
+					"position": [0, 0, 1]
+				},
+				"rpm_meter": {
+					"position": [0, 0, 1]
+				},
+				"tempmeter": {
+					"position": [0, 0, 1]
+				}
+			}
+		},
+		"animation.bmw320ie30.meter_player2": {
+			"loop": true,
+			"bones": {
+				"speedmeter2": {
+					"position": [0, 0, -1]
+				},
+				"rpm_meter2": {
+					"position": [0, 0, -1]
+				},
+				"tempmeter2": {
+					"position": [0, 0, -1]
+				}
+			}
+		},
+		"animation.bmw320ie30.open": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "open"
+				}
+			}
+		},
+		"animation.bmw320ie30.trunk": {
+			"loop": false,
+			"bones": {
+				"trunk": {
+					"rotation": {
+						"0.0": [-45, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.bmw320ie30.trunk2": {
+			"loop": false,
+			"bones": {
+				"trunk": {
+					"rotation": {
+						"0.0": [45, 0, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "close"
+				}
+			}
+		},
+		"animation.bmw320ie30.close": {
+			"loop": false,
+			"bones": {
+				"leftdoor": {
+					"rotation": {
+						"0.0": [0, 45, 0],
+						"0.56": [0, 0, 0]
+					}
+				},
+				"rightdoor": {
+					"rotation": {
+						"0.0": [0, -45, 0],
+						"0.56": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "close"
+				}
+			}
+		},
+		"animation.bmw320ie30.wipers": {
+			"loop": true,
+			"animation_length": 0.6,
+			"bones": {
+				"wiper1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3": [-15.0921, 35.0402, 45.5287],
+						"0.6": [0, 0, 0]
+					}
+				},
+				"wiper2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.3": [-15.0921, 35.0402, 45.5287],
+						"0.6": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.bmw320ie30.down": {
+			"loop": true,
+			"bones": {
+				"bmw_e30_sedan": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * -1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"glass4": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * -1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.bmw320ie30.up": {
+			"loop": true,
+			"bones": {
+				"bmw_e30_sedan": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * 1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"glass4": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * 1", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

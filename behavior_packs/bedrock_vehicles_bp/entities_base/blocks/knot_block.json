@@ -1,0 +1,60 @@
+	{
+  "format_version": "1.20.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "block:knot",
+	  "states": {
+		"block:knot":[false, true]
+	}
+    },
+    "components": {
+	  "minecraft:custom_components": ["block:knot"],
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "knot",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:destructible_by_explosion":false,
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin":[
+					0,
+					0,
+					0],
+				"size":[
+					0,
+					0,
+					0
+					]
+				},
+      "minecraft:placement_filter": {
+	    "conditions": [
+	    {
+          "block_filter":  [
+			"acacia_fence",
+			"bamboo_fence",
+			"birch_fence",
+			"cherry_fence",
+			"dark_oak_fence",
+			"jungle_fence",
+			"spruce_fence",
+			"oak_fence",
+	      	"warped_fence",
+	      	"crimson_fence",
+	      	"nether_brick_fence",
+	      	"mangrove_fence"
+	    ],
+	    "allowed_faces": [
+	      "up"
+	    ]
+	  }
+	]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.5
+    },    
+      "minecraft:geometry": "geometry.knot"
+    }
+  }
+}

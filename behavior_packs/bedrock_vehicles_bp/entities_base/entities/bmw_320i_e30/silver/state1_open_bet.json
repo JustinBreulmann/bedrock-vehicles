@@ -1,0 +1,105 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "bmw320ie30:silver_open_between",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"explode"
+			]
+		},
+		"animations": {
+			"explode": "controller.animation.bmw320ie30_explode"
+			}
+		},
+		"component_groups": {
+			"door_open": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:silver2_open",
+          		"preserve_equipment": true,
+          		"delay": 0.1
+       			 }
+    		},
+    		"hood_close": {
+        		"minecraft:transformation": {
+          		"into": "bmw320ie30:silver_between",
+          		"delay": 0.1
+       			 }
+    		}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.5,
+				"height": 1
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:interact": {
+			"interactions": [
+				{
+					"on_interact": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "player",
+									"value": true
+								}
+							]
+						},
+						"event": "hood_close"
+					},
+					"use_item": false,
+					"interact_text": "Close Trunk"
+				},
+				{
+					"on_interact": {
+						"event": "door_open"
+					},
+					"use_item": false,
+					"interact_text": "Open Door"
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			}
+		},
+
+		"events": {
+			"door_open": {
+        		"add": {
+          			"component_groups": [
+            			"door_open"
+          			]
+        		}
+      		},
+      		"hood_close": {
+        		"add": {
+          			"component_groups": [
+            			"hood_close"
+          			]
+        		}
+      		}
+		}
+	}
+}

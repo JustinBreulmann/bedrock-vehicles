@@ -1,0 +1,1 @@
+playanimation @s animation.a_quattro_sport.meter1 animation.a_quattro_sport.meter1 0 "!query.is_moving"

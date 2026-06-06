@@ -1,0 +1,135 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.p959_meter": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"meter": "query.ground_speed > 3"
+						}
+					]
+				},
+				"meter": {
+					"transitions": [
+						{
+							"default": "query.ground_speed < 3"
+						}
+					],
+					"on_entry": [
+						"/function p959meter"
+					]
+				}
+			}
+		},
+		"controller.animation.p959_pecutan": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pecutan": "query.ground_speed > 3" 
+						}
+					]
+				},
+				"pecutan": {
+					"transitions": [
+						{
+							"default": "query.ground_speed < 3"
+						}
+					],
+					"on_entry": [
+						"@s velocity_1",
+						"/playsound vehicle.p959.adv_drive @a[r=2.4]"
+					]
+				}
+			}
+		},
+		"controller.animation.p959_soundstop": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"startup": "query.ground_speed < 3" 
+						}
+					]
+				},
+				"startup": {
+					"transitions": [
+						{
+							"default": "query.ground_speed > 3"
+						}
+					],
+					"on_entry": [
+						"/stopsound @a[r=5] vehicle.p959.adv_drive",
+						"@s velocity_stationary"
+					]
+				}
+			}
+		},
+		"controller.animation.p959_soundstop2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"startup": "!query.has_rider"
+						}
+					]
+				},
+				"startup": {
+					"transitions": [
+						{
+							"default": "query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/stopsound @a[r=5] vehicle.p959.adv_drive"
+					]
+				}
+			}
+		},
+		"controller.animation.p959_roadkill": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"roadkill": "query.ground_speed > 22.8" 
+						}
+					]
+				},
+				"roadkill": {
+					"transitions": [
+						{
+							"default": "query.ground_speed > 22.8"
+						}
+					],
+					"on_entry": [
+						"@s roadkill"
+					]
+				}
+			}
+		},
+		"controller.animation.p959_explode": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ono": "!query.is_alive"
+						}
+					]
+				},
+				"ono": {
+					"transitions": [
+						{
+							"default": "query.is_alive"
+						}
+					],
+					"on_entry": [
+						"/summon ashminggu:vehicle_explosion",
+						"/summon ashminggu:vehicle_explosion",
+						"/particle minecraft:huge_explosion_emitter ~~~"
+					]
+				}
+			}
+		}
+	}
+}

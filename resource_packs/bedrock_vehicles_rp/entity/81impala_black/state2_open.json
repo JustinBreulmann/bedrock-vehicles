@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "81impala:ausstellung",
+			"materials": {
+				"default": "enderman"
+			},
+			"textures": {
+				"default": "textures/entity/81impala/black"
+			},
+			"geometry": {
+				"default": "geometry.81impala_m2_open"
+			},
+			"render_controllers": [
+				"controller.render.81impala"
+			],
+			"animations": {
+				"drive": "animation.81impala.drive",
+				"turning": "animation.81impala.turning",
+				"door": "animation.81impala.door",
+				"open": "animation.81impala.open",
+				"meter_player": "animation.81impala.meter_player",
+				"meter_player2": "animation.81impala.meter_player2"
+			},
+			"spawn_egg": {
+				"texture": "81impala",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.81impala.general2"
+				}
+			]
+		}
+	}
+}

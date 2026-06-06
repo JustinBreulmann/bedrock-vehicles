@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "hiluxn50:ikea_lorry2_open",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/hiluxn50_lorry/umak"
+			},
+			"geometry": {
+				"default": "geometry.hiluxn50_lorry_m2_open"
+			},
+			"render_controllers": [
+				"controller.render.hiluxn50"
+			],
+			"animations": {
+				"drive": "animation.hiluxn50.drive",
+				"turning": "animation.hiluxn50.turning",
+				"door": "animation.hiluxn50.door",
+				"open": "animation.hiluxn50.open",
+				"meter_player": "animation.hiluxn50.meter_player",
+				"meter_player2": "animation.hiluxn50.meter_player2",
+				"wipers": "animation.hiluxn50.wipers",
+				"up": "animation.hiluxn50.up",
+				"down": "animation.hiluxn50.down"
+			},
+			"sound_effects": {
+        		"open": "vehicle.hiluxn50.dooropen"
+      		},
+			"spawn_egg": {
+				"texture": "hiluxn50",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.hiluxn50.general2"
+				}
+			]
+		}
+	}
+}

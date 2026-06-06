@@ -1,0 +1,1 @@
+playanimation @s animation.spitfiremk4.meter1 animation.spitfiremk4.meter1 0 "!query.is_moving"

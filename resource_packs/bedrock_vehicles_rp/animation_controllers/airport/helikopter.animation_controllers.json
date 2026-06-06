@@ -1,0 +1,54 @@
+{
+	"format_version" : "1.12.0",
+	"animation_controllers" : {
+		"controller.animation.helikopter.ride" : {
+			"initial_state" : "standing",
+			"states" : {
+				"standing" : {
+					"animations": ["off"],
+					"transitions": [
+						{
+							"on_ground": "query.has_rider && query.is_on_ground && !query.is_in_water"
+						}
+					]
+				},
+				"on_ground": {
+					"animations": ["on_ground"],
+					"transitions": [
+						{
+							"standing": "!query.has_rider || query.is_in_water"
+						},
+						{
+							"flying": "!query.is_on_ground && query.has_rider"
+						}
+					]
+				},
+				"flying": {
+					"animations": ["on_fly"],
+					"transitions": [
+						{
+							"on_ground": "query.is_on_ground && query.has_rider"
+						},
+						{
+							"standing": "!query.has_rider || query.is_in_water"
+						}
+					]
+				}
+			}
+		},
+				"controller.animation.helikopter.death" : {
+					"initial_state" : "alive",
+					"states" : {
+						"alive" : {
+							"transitions": [
+								{
+									"death1": "!query.is_alive"
+								}
+							]
+						},
+						"death1": {
+						}
+					}
+				}
+			}
+		}

@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "plane:smallplane",
+        "materials": { 
+            "default": "entity_alphatest"
+        },
+        "textures": {
+            "default": "textures/entity/smallplane"
+          },
+        "geometry": {
+          "default": "geometry.smallplane"
+        },
+        "scripts": {
+          "animate": [
+            "ride_controller",
+            "death_controller"
+          ]
+        },
+        "animations": {
+          "ride_controller": "controller.animation.smallplane.ride",
+          "death_controller": "controller.animation.smallplane.death",
+          "on_ground": "animation.smallplane.on_ground",
+          "on_wait": "animation.smallplane.on_wait",
+          "on_fly": "animation.smallplane.on_fly",
+          "off": "animation.smallplane.off"
+        },
+        "render_controllers": [ "controller.render.smallplane" ]
+      }
+    }
+  }

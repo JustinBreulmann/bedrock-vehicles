@@ -1,0 +1,44 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "add:jet_ski",
+            "materials": {
+                "default": "jet_ski"
+            },
+            "textures": {
+                "blue": "textures/jet_ski/jet_ski_blue",
+                "red": "textures/jet_ski/jet_ski_red",
+                "lime": "textures/jet_ski/jet_ski_lime",
+                "orange": "textures/jet_ski/jet_ski_orange",
+                "purple": "textures/jet_ski/jet_ski_purple",
+                "yellow": "textures/jet_ski/jet_ski_yellow",
+                "gray": "textures/jet_ski/jet_ski_gray",
+                "magenta": "textures/jet_ski/jet_ski_magenta",
+                "brown": "textures/jet_ski/jet_ski_brown",
+                "white": "textures/jet_ski/jet_ski_white",
+                "cyan": "textures/jet_ski/jet_ski_cyan",
+                "green": "textures/jet_ski/jet_ski_green",
+                "black": "textures/jet_ski/jet_ski_black",
+                "lightblue": "textures/jet_ski/jet_ski_light_blue",
+                "pink": "textures/jet_ski/jet_ski_pink",
+                "lightgray": "textures/jet_ski/jet_ski_light_gray"
+            },
+            "geometry": {
+                "default": "geometry.jet_ski"
+            },
+            "animations": {
+                "volante": "animation.jetski.volante",
+                "jetski": "animation.jetski.jetski",
+                "run": "animation.jetski.run"
+            },
+            "animation_controllers": [{
+                "volante": "controller.animation.jetski.volante"
+            }],
+            "particle_effects": {
+                "water": "minecraft:magnesium_salts_emitter"
+            },
+            "render_controllers": ["controller.render.jet_ski"]
+            }
+        }
+    }

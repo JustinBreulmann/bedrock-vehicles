@@ -1,0 +1,1 @@
+playanimation @a[r=1] animation.player.hiluxn50.drive controller.animation.player.base 0 "!query.is_riding"

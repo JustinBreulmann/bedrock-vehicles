@@ -1,0 +1,253 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "plane:helikopter",
+      "scripts": {
+        "animate": [
+          "ride_controller",
+          "death_controller"
+        ]
+      },
+      "animations": {
+        "ride_controller": "controller.animation.helikopter.ride",
+        "death_controller": "controller.animation.helikopter.death",
+        "on_ground": "animation.helikopter.on_ground",
+        "on_fly": "animation.helikopter.on_fly",
+        "off": "animation.helikopter.off"
+      },
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+
+      "helikopter_random": {
+        "minecraft:rideable": {
+          "pull_in_entities": true,
+          "seat_count": 1,
+          "interact_text": "action.interact.mount",
+          "family_types": [
+            "player"
+          ],
+          "seats": 
+            {
+              "position": [ -0.1, 0.68, -0.2 ],
+              "min_rider_count": 0,
+              "max_rider_count": 1
+            }
+        }
+      },
+      "helikopter_saddled": {
+        "minecraft:movement": {
+          "value": 0.1
+        },
+        "minecraft:movement.generic": {
+        },
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.player_ride_tamed": {
+          "priority": 0
+        },
+        "minecraft:is_saddled": {
+        },
+        "minecraft:rideable": {
+          "pull_in_entities": true,
+          "seat_count": 1,
+          "interact_text": "action.interact.mount",
+          "family_types": [
+            "player"
+          ],
+          "seats": 
+            {
+              "position": [ -0.1, 0.68, -0.2 ],
+              "min_rider_count": 0,
+              "max_rider_count": 1
+            }
+        },
+        "minecraft:input_ground_controlled": {
+        },
+        "minecraft:can_power_jump": {
+        },
+        "minecraft:horse.jump_strength": {
+          "value": {
+            "range_min": 1,
+            "range_max": 1
+          }
+        }
+      },
+      "helikopter_dead": {
+        "minecraft:transformation": {
+          "into": "plane:helikopter_break"
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:scale": {
+        "value": 1.1
+      },
+      "minecraft:behavior.rise_to_liquid_level": {
+        "liquid_y_offset": 0,
+        "rise_delta": -0.1,
+        "sink_delta": 0.1
+      },
+      "minecraft:navigation.walk": {
+        "is_amphibious": false,
+        "can_path_over_water": false,
+        "can_swim": false,
+        "can_sink": true,
+        "can_fly": true
+      },
+      "minecraft:breathable": {
+        "total_supply": 0,
+        "suffocate_time": 1,
+        "breathes_air": true,
+        "breathes_water": false
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "rider_count",
+                        "operator": "not",
+                        "value": 0
+                    },
+                    {
+                        "test": "in_water",
+                        "operator": "!=",
+                        "value": true
+                    }
+                ]
+            },
+            "event": "plane:start_flying"
+        },
+        {
+          "filters": {
+              "all_of": [
+                  {
+                      "test": "rider_count",
+                      "operator": "equals",
+                      "value": 0
+                  },
+                  {
+                      "test": "in_water",
+                      "operator": "!=",
+                      "value": true
+                  }
+              ]
+          },
+          "event": "plane:stop_flying"
+        },
+          {
+            "filters": {
+              "test": "has_tag",
+              "operator": "equals",
+              "value": "water"
+            },
+            "event": "plane:in_water"
+          }
+        ]
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:type_family": {
+        "family": [ "helikopter", "engine","city" ]
+      },
+      "minecraft:jump.static": {},
+      "minecraft:collision_box": {
+        "width": 3.5,
+        "height": 3.5
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+  },
+
+"events": {
+  "minecraft:entity_spawned": {
+    "add": {
+      "component_groups": [
+        "helikopter_random"
+      ]
+    }
+  },
+  "plane:start_flying": {
+        "remove": {
+          "component_groups": [
+            "helikopter_random"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "helikopter_saddled",
+            "plane:start_flying"
+          ]
+      }
+  },
+  "plane:stop_flying": {
+        "remove": {
+          "component_groups": [
+            "helikopter_saddled"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "helikopter_random"
+          ]
+        }
+  },
+    "helikopter_saddled": {
+      "remove": {
+        "component_groups": [
+          "helikopter_random"
+        ]
+      },
+      "add": {
+        "component_groups": [
+          "helikopter_saddled"
+        ]
+      }
+    },
+        "plane:dead_helikopter":{
+          "add": {
+            "component_groups": [
+              "helikopter_dead"
+            ]
+          }
+        },
+        "plane:in_water": {
+          "remove": {
+            "component_groups": [
+              "helikopter_saddled",
+              "helikopter_random"
+            ]
+          }
+        }
+       }
+     }
+  }

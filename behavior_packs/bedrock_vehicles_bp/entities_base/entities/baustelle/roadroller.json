@@ -1,0 +1,66 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "id:roadroller",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"components": {
+			"minecraft:inventory": {
+				"container_type": "container",
+				"inventory_size": 54,
+				"private": false
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:type_family": {
+				"family": [
+					"cars"
+				]
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:jump.static": {},
+			"minecraft:knockback_resistance": {
+				"value": 0.5
+			},
+			"minecraft:movement": {
+				"value": 0.16942
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"crouching_skip_interact": true,
+				"interact_text": "roadroller",
+				"family_types": [
+					"player"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [0, 2.5, -1.3],
+						"min_rider_count": 1,
+						"max_rider_count": 1
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:scale": {
+				"value": 1
+			}
+		}
+	}
+}

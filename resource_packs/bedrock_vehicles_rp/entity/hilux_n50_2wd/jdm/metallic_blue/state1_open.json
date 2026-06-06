@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "hiluxn50:blue_open",
+			"materials": {
+				"default": "enderman",
+				"glass": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/hiluxn50/mblue"
+			},
+			"geometry": {
+				"default": "geometry.hiluxn50_jdm_m1_open"
+			},
+			"render_controllers": [
+				"controller.render.hiluxn50"
+			],
+			"animations": {
+				"drive": "animation.hiluxn50.drive",
+				"turning": "animation.hiluxn50.turning",
+				"hood": "animation.hiluxn50.hood"
+			},
+			"spawn_egg": {
+				"texture": "hiluxn50",
+				"texture_index": 0
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.hiluxn50.general3"
+				}
+			]
+		}
+	}
+}

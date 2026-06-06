@@ -1,0 +1,1 @@
+playanimation @s animation.countach_lp400.meter1 animation.countach_lp400.meter1 0 "!query.is_moving"

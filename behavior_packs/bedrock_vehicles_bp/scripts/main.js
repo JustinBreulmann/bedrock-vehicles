@@ -17,3 +17,5 @@ system.runInterval(() => {
 console.warn("[Bedrock Vehicles] Fahrzeugphysik und Steuerung aktiv.");
 
 // Build-Trace #41: Datei neu formatiert
+
+// Build-Trace #42: Imports bereinigt

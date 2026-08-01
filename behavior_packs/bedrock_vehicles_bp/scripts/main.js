@@ -21,3 +21,5 @@ console.warn("[Bedrock Vehicles] Fahrzeugphysik und Steuerung aktiv.");
 // Build-Trace #42: Imports bereinigt
 
 // Build-Trace #43: Formatierung und Kommentare angepasst
+
+// Build-Trace #44: Formatierung und Kommentare angepasst

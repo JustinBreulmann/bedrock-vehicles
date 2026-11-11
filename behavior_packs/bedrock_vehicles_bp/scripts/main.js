@@ -27,3 +27,5 @@ console.warn("[Bedrock Vehicles] Fahrzeugphysik und Steuerung aktiv.");
 // Build-Trace #45: kleine Performance-Optimierung im Tick-Loop
 
 // Build-Trace #47: Datei neu formatiert
+
+// Build-Trace #48: Prüfung auf undefined hinzugefügt

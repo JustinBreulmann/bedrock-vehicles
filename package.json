@@ -1,6 +1,6 @@
 {
   "name": "bedrock-vehicles",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "description": "High-fidelity driveable vehicle collection (BMW E30, Hilux N50, Impala 81, Peterbilt 389, Porsche 959, Countach LP400, Firetruck, Spitfire Mk4, Jet Ski, Helicopters) with realistic physics, horns, fuel and mechanics",
   "author": "Justin Breulmann <jb824851@fh-muenster.de>",
   "license": "MIT",
